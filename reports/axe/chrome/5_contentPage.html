@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <style>
+            .violationCard {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+            .violationCardLine {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .violationCardTitleItem {
+                white-space: nowrap;
+            }
+            .learnMore {
+                margin-bottom: 0.75rem;
+            }
+            .violationNode {
+                font-size: 0.75rem;
+            }
+        </style>
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+            crossorigin="anonymous"
+        />
+        <script
+            src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"
+        ></script>
+        <link
+            rel="icon"
+            href="https://www.deque.com/wp-content/uploads/2018/03/cropped-DQ_SecondaryLogo_HeroBlue_RGB-1-32x32.png"
+            sizes="32x32"
+        />
+        <title>AXE Accessibility Results</title>
+    </head>
+    <body>
+        <div style="padding: 2rem">
+            <h3>
+                AXE Accessibility Results
+            </h3>
+            <h5>
+                <small class="text-muted"
+                    >Page URL:
+                    <a href="https:&#x2F;&#x2F;angular-dashboard-lime.vercel.app&#x2F;content&#x2F;videos" target="_blank" class="card-link">https:&#x2F;&#x2F;angular-dashboard-lime.vercel.app&#x2F;content&#x2F;videos</a>
+
+                </small>
+            </h5>
+
+            <h5>axe-core found <span class="badge badge-warning">23</span> violations</h5>
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th width="5%">#</th>
+                        <th width="45%">Description</th>
+                        <th width="15%">Axe rule ID</th>
+                        <th width="15%">WCAG</th>
+                        <th width="15%">Impact</th>
+                        <th width="5%">Count</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Buttons must have discernible text</td>
+                        <td>button-name</td>
+                        <td>WCAG 2.0 Level A</td>
+                        <td>critical</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Images must have alternative text</td>
+                        <td>image-alt</td>
+                        <td>WCAG 2.0 Level A</td>
+                        <td>critical</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Links must have discernible text</td>
+                        <td>link-name</td>
+                        <td>WCAG 2.0 Level A</td>
+                        <td>serious</td>
+                        <td>12</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Failed</h3>
+            <div class="card violationCard">
+                <div class="card-body">
+                    <div class="violationCardLine">
+                        <h5 class="card-title violationCardTitleItem">Buttons must have discernible text</h5>
+                        <a
+                            href="https:&#x2F;&#x2F;dequeuniversity.com&#x2F;rules&#x2F;axe&#x2F;4.11&#x2F;button-name?application&#x3D;axeAPI"
+                            target="_blank"
+                            class="card-link violationCardTitleItem learnMore"
+                            >Learn more</a
+                        >
+                    </div>
+                    <div class="violationCardLine">
+                        <h6 class="card-subtitle mb-2 text-muted">button-name</h6>
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            WCAG 2.0 Level A
+                        </h6>
+                    </div>
+                    <div class="violationCardLine">
+                        <p class="card-text">Ensure buttons have discernible text</p>
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            critical
+                        </h6>
+                    </div>
+                    <div class="violationNode">
+                        <table class="table table-sm table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th width="50%">Source Code</th>
+                                    <th width="50%">Selector</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td><samp>&lt;button _ngcontent-ng-c1820903938&#x3D;&quot;&quot; mat-icon-button&#x3D;&quot;&quot; class&#x3D;&quot;mdc-icon-button mat-mdc-icon-button mat-mdc-button-base mat-unthemed&quot; mat-ripple-loader-class-name&#x3D;&quot;mat-mdc-button-ripple&quot; mat-ripple-loader-centered&#x3D;&quot;&quot;&gt;</samp></td>
+                                    <td><samp>&quot;button:nth-child(1)&quot;</samp></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td><samp>&lt;button _ngcontent-ng-c1820903938&#x3D;&quot;&quot; mat-icon-button&#x3D;&quot;&quot; class&#x3D;&quot;mdc-icon-button mat-mdc-icon-button mat-mdc-button-base mat-unthemed&quot; mat-ripple-loader-uninitialized&#x3D;&quot;&quot; mat-ripple-loader-class-name&#x3D;&quot;mat-mdc-button-ripple&quot; mat-ripple-loader-centered&#x3D;&quot;&quot;&gt;</samp></td>
+                                    <td><samp>&quot;button:nth-child(3)&quot;</samp></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td><samp>&lt;button _ngcontent-ng-c18209...&#x3D;&quot;&quot; mat-icon-button&#x3D;&quot;&quot; class&#x3D;&quot;mdc-icon-button mat-...&quot; mat-ripple-loader-un...&#x3D;&quot;&quot; mat-ripple-loader-cl...&#x3D;&quot;mat-mdc-button-rippl...&quot; mat-ripple-loader-ce...&#x3D;&quot;&quot; aria-haspopup&#x3D;&quot;menu&quot; aria-expanded&#x3D;&quot;false&quot;&gt;</samp></td>
+                                    <td><samp>&quot;.mat-mdc-menu-trigger&quot;</samp></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="card violationCard">
+                <div class="card-body">
+                    <div class="violationCardLine">
+                        <h5 class="card-title violationCardTitleItem">Images must have alternative text</h5>
+                        <a
+                            href="https:&#x2F;&#x2F;dequeuniversity.com&#x2F;rules&#x2F;axe&#x2F;4.11&#x2F;image-alt?application&#x3D;axeAPI"
+                            target="_blank"
+                            class="card-link violationCardTitleItem learnMore"
+                            >Learn more</a
+                        >
+                    </div>
+                    <div class="violationCardLine">
+                        <h6 class="card-subtitle mb-2 text-muted">image-alt</h6>
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            WCAG 2.0 Level A
+                        </h6>
+                    </div>
+                    <div class="violationCardLine">
+                        <p class="card-text">Ensure &lt;img&gt; elements have alternative text or a role of none or presentation</p>
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            critical
+                        </h6>
+                    </div>
+                    <div class="violationNode">
+                        <table class="table table-sm table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th width="50%">Source Code</th>
+                                    <th width="50%">Selector</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td><samp>&lt;img _ngcontent-ng-c1820903938&#x3D;&quot;&quot; class&#x3D;&quot;w-[24px] h-[24px] object-cover rounded-full&quot; src&#x3D;&quot;https:&#x2F;&#x2F;firebasestorage.googleapis.com&#x2F;v0&#x2F;b&#x2F;angular-dashboard-29f24.firebasestorage.app&#x2F;o&#x2F;profile-pic.webp?alt&#x3D;media&amp;amp;token&#x3D;96b5e9d4-0144-4485-8de8-25a56ab73b31&quot;&gt;</samp></td>
+                                    <td><samp>&quot;.w-\[24px\]&quot;</samp></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td><samp>&lt;img _ngcontent-ng-c3967954725&#x3D;&quot;&quot; class&#x3D;&quot;object-cover object-center rounded-full mb-3 aspect-square&quot; width&#x3D;&quot;32&quot; height&#x3D;&quot;32&quot; src&#x3D;&quot;https:&#x2F;&#x2F;firebasestorage.googleapis.com&#x2F;v0&#x2F;b&#x2F;angular-dashboard-29f24.firebasestorage.app&#x2F;o&#x2F;profile-pic.webp?alt&#x3D;media&amp;amp;token&#x3D;96b5e9d4-0144-4485-8de8-25a56ab73b31&quot;&gt;</samp></td>
+                                    <td><samp>&quot;.object-center&quot;</samp></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td><samp>&lt;img _ngcontent-ng-c3086932824&#x3D;&quot;&quot; class&#x3D;&quot;rounded-2xl w-[300px] h-[150px] object-cover&quot; src&#x3D;&quot;https:&#x2F;&#x2F;i.ytimg.com&#x2F;vi&#x2F;Irf4aZC3LPY&#x2F;sddefault.jpg&quot;&gt;</samp></td>
+                                    <td><samp>&quot;.gap-5.flex.ng-star-inserted:nth-child(1) &gt; .min-w-\[300px\].ng-star-inserted[_ngcontent-ng-c3086932824&#x3D;&quot;&quot;] &gt; .rounded-2xl.w-\[300px\].h-\[150px\]&quot;</samp></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td><samp>&lt;img _ngcontent-ng-c3086932824&#x3D;&quot;&quot; class&#x3D;&quot;rounded-2xl w-[300px] h-[150px] object-cover&quot; src&#x3D;&quot;https:&#x2F;&#x2F;i.ytimg.com&#x2F;vi&#x2F;MtTAfjiZxtk&#x2F;sddefault.jpg&quot;&gt;</samp></td>
+                                    <td><samp>&quot;.gap-5.flex.ng-star-inserted:nth-child(2) &gt; .min-w-\[300px\].ng-star-inserted[_ngcontent-ng-c3086932824&#x3D;&quot;&quot;] &gt; .rounded-2xl.w-\[300px\].h-\[150px\]&quot;</samp></td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td><samp>&lt;img _ngcontent-ng-c3086932824&#x3D;&quot;&quot; class&#x3D;&quot;rounded-2xl w-[300px] h-[150px] object-cover&quot; src&#x3D;&quot;https:&#x2F;&#x2F;i.ytimg.com&#x2F;vi&#x2F;I13uAoOGU_4&#x2F;sddefault.jpg&quot;&gt;</samp></td>
+                                    <td><samp>&quot;.gap-5.flex.ng-star-inserted:nth-child(3) &gt; .min-w-\[300px\].ng-star-inserted[_ngcontent-ng-c3086932824&#x3D;&quot;&quot;] &gt; .rounded-2xl.w-\[300px\].h-\[150px\]&quot;</samp></td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td><samp>&lt;img _ngcontent-ng-c3086932824&#x3D;&quot;&quot; class&#x3D;&quot;rounded-2xl w-[300px] h-[150px] object-cover&quot; src&#x3D;&quot;https:&#x2F;&#x2F;i.ytimg.com&#x2F;vi&#x2F;plQJIgD2rl8&#x2F;sddefault.jpg&quot;&gt;</samp></td>
+                                    <td><samp>&quot;.gap-5.flex.ng-star-inserted:nth-child(4) &gt; .min-w-\[300px\].ng-star-inserted[_ngcontent-ng-c3086932824&#x3D;&quot;&quot;] &gt; .rounded-2xl.w-\[300px\].h-\[150px\]&quot;</samp></td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td><samp>&lt;img _ngcontent-ng-c3086932824&#x3D;&quot;&quot; class&#x3D;&quot;rounded-2xl w-[300px] h-[150px] object-cover&quot; src&#x3D;&quot;https:&#x2F;&#x2F;i.ytimg.com&#x2F;vi&#x2F;vHNeAqgNM4o&#x2F;sddefault.jpg&quot;&gt;</samp></td>
+                                    <td><samp>&quot;.gap-5.flex.ng-star-inserted:nth-child(5) &gt; .min-w-\[300px\].ng-star-inserted[_ngcontent-ng-c3086932824&#x3D;&quot;&quot;] &gt; .rounded-2xl.w-\[300px\].h-\[150px\]&quot;</samp></td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td><samp>&lt;img _ngcontent-ng-c3086932824&#x3D;&quot;&quot; class&#x3D;&quot;rounded-2xl w-[300px] h-[150px] object-cover&quot; src&#x3D;&quot;https:&#x2F;&#x2F;i.ytimg.com&#x2F;vi&#x2F;h6-BhzFD1CM&#x2F;sddefault.jpg&quot;&gt;</samp></td>
+                                    <td><samp>&quot;.gap-5.flex.ng-star-inserted:nth-child(6) &gt; .min-w-\[300px\].ng-star-inserted[_ngcontent-ng-c3086932824&#x3D;&quot;&quot;] &gt; .rounded-2xl.w-\[300px\].h-\[150px\]&quot;</samp></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="card violationCard">
+                <div class="card-body">
+                    <div class="violationCardLine">
+                        <h5 class="card-title violationCardTitleItem">Links must have discernible text</h5>
+                        <a
+                            href="https:&#x2F;&#x2F;dequeuniversity.com&#x2F;rules&#x2F;axe&#x2F;4.11&#x2F;link-name?application&#x3D;axeAPI"
+                            target="_blank"
+                            class="card-link violationCardTitleItem learnMore"
+                            >Learn more</a
+                        >
+                    </div>
+                    <div class="violationCardLine">
+                        <h6 class="card-subtitle mb-2 text-muted">link-name</h6>
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            WCAG 2.0 Level A
+                        </h6>
+                    </div>
+                    <div class="violationCardLine">
+                        <p class="card-text">Ensure links have discernible text</p>
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            serious
+                        </h6>
+                    </div>
+                    <div class="violationNode">
+                        <table class="table table-sm table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th width="50%">Source Code</th>
+                                    <th width="50%">Selector</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td><samp>&lt;a _ngcontent-ng-c12937...&#x3D;&quot;&quot; mat-list-item&#x3D;&quot;&quot; routerlinkactive&#x3D;&quot;&quot; class&#x3D;&quot;mat-mdc-list-item md...&quot; aria-disabled&#x3D;&quot;false&quot; href&#x3D;&quot;&#x2F;dashboard&quot; style&#x3D;&quot;--mat-list-list-item...&quot;&gt;</samp></td>
+                                    <td><samp>&quot;a[href$&#x3D;&quot;dashboard&quot;]&quot;</samp></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td><samp>&lt;a _ngcontent-ng-c12937...&#x3D;&quot;&quot; mat-list-item&#x3D;&quot;&quot; routerlinkactive&#x3D;&quot;&quot; class&#x3D;&quot;mat-mdc-list-item md...&quot; aria-disabled&#x3D;&quot;false&quot; href&#x3D;&quot;&#x2F;components&quot; style&#x3D;&quot;--mat-list-list-item...&quot;&gt;</samp></td>
+                                    <td><samp>&quot;.mdc-list-item--with-trailing-meta&quot;</samp></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td><samp>&lt;a _ngcontent-ng-c12937...&#x3D;&quot;&quot; mat-list-item&#x3D;&quot;&quot; routerlinkactive&#x3D;&quot;&quot; class&#x3D;&quot;mat-mdc-list-item md...&quot; aria-disabled&#x3D;&quot;false&quot; href&#x3D;&quot;&#x2F;components&#x2F;buttons&quot; style&#x3D;&quot;--mat-list-list-item...&quot;&gt;</samp></td>
+                                    <td><samp>&quot;a[href$&#x3D;&quot;buttons&quot;]&quot;</samp></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td><samp>&lt;a _ngcontent-ng-c12937...&#x3D;&quot;&quot; mat-list-item&#x3D;&quot;&quot; routerlinkactive&#x3D;&quot;&quot; class&#x3D;&quot;mat-mdc-list-item md...&quot; aria-disabled&#x3D;&quot;false&quot; href&#x3D;&quot;&#x2F;components&#x2F;dialog&quot; style&#x3D;&quot;--mat-list-list-item...&quot;&gt;</samp></td>
+                                    <td><samp>&quot;a[href$&#x3D;&quot;dialog&quot;]&quot;</samp></td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td><samp>&lt;a _ngcontent-ng-c12937...&#x3D;&quot;&quot; mat-list-item&#x3D;&quot;&quot; routerlinkactive&#x3D;&quot;&quot; class&#x3D;&quot;mat-mdc-list-item md...&quot; aria-disabled&#x3D;&quot;false&quot; href&#x3D;&quot;&#x2F;components&#x2F;inputs&quot; style&#x3D;&quot;--mat-list-list-item...&quot;&gt;</samp></td>
+                                    <td><samp>&quot;a[href$&#x3D;&quot;inputs&quot;]&quot;</samp></td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td><samp>&lt;a _ngcontent-ng-c12937...&#x3D;&quot;&quot; mat-list-item&#x3D;&quot;&quot; routerlinkactive&#x3D;&quot;&quot; class&#x3D;&quot;mat-mdc-list-item md...&quot; aria-disabled&#x3D;&quot;false&quot; href&#x3D;&quot;&#x2F;components&#x2F;panels&quot; style&#x3D;&quot;--mat-list-list-item...&quot;&gt;</samp></td>
+                                    <td><samp>&quot;a[href$&#x3D;&quot;panels&quot;]&quot;</samp></td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td><samp>&lt;a _ngcontent-ng-c12937...&#x3D;&quot;&quot; mat-list-item&#x3D;&quot;&quot; routerlinkactive&#x3D;&quot;&quot; class&#x3D;&quot;mat-mdc-list-item md...&quot; aria-disabled&#x3D;&quot;false&quot; href&#x3D;&quot;&#x2F;components&#x2F;progress&quot; style&#x3D;&quot;--mat-list-list-item...&quot;&gt;</samp></td>
+                                    <td><samp>&quot;a[href$&#x3D;&quot;progress&quot;]&quot;</samp></td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td><samp>&lt;a _ngcontent-ng-c12937...&#x3D;&quot;&quot; mat-list-item&#x3D;&quot;&quot; routerlinkactive&#x3D;&quot;&quot; class&#x3D;&quot;mat-mdc-list-item md...&quot; aria-disabled&#x3D;&quot;false&quot; href&#x3D;&quot;&#x2F;components&#x2F;stepper&quot; style&#x3D;&quot;--mat-list-list-item...&quot;&gt;</samp></td>
+                                    <td><samp>&quot;a[href$&#x3D;&quot;stepper&quot;]&quot;</samp></td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td><samp>&lt;a _ngcontent-ng-c12937...&#x3D;&quot;&quot; mat-list-item&#x3D;&quot;&quot; routerlinkactive&#x3D;&quot;&quot; class&#x3D;&quot;mat-mdc-list-item md...&quot; aria-disabled&#x3D;&quot;false&quot; href&#x3D;&quot;&#x2F;components&#x2F;table&quot; style&#x3D;&quot;--mat-list-list-item...&quot;&gt;</samp></td>
+                                    <td><samp>&quot;a[href$&#x3D;&quot;table&quot;]&quot;</samp></td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td><samp>&lt;a _ngcontent-ng-c12937...&#x3D;&quot;&quot; mat-list-item&#x3D;&quot;&quot; routerlinkactive&#x3D;&quot;&quot; class&#x3D;&quot;mat-mdc-list-item md...&quot; aria-disabled&#x3D;&quot;false&quot; href&#x3D;&quot;&#x2F;components&#x2F;tabs&quot; style&#x3D;&quot;--mat-list-list-item...&quot;&gt;</samp></td>
+                                    <td><samp>&quot;a[href$&#x3D;&quot;tabs&quot;]&quot;</samp></td>
+                                </tr>
+                                <tr>
+                                    <td>11</td>
+                                    <td><samp>&lt;a _ngcontent-ng-c12937...&#x3D;&quot;&quot; mat-list-item&#x3D;&quot;&quot; routerlinkactive&#x3D;&quot;&quot; class&#x3D;&quot;mat-mdc-list-item md...&quot; aria-disabled&#x3D;&quot;false&quot; href&#x3D;&quot;&#x2F;forms&quot; style&#x3D;&quot;--mat-list-list-item...&quot;&gt;</samp></td>
+                                    <td><samp>&quot;a[href$&#x3D;&quot;forms&quot;]&quot;</samp></td>
+                                </tr>
+                                <tr>
+                                    <td>12</td>
+                                    <td><samp>&lt;a _ngcontent-ng-c12937...&#x3D;&quot;&quot; mat-list-item&#x3D;&quot;&quot; routerlinkactive&#x3D;&quot;&quot; class&#x3D;&quot;mat-mdc-list-item md...&quot; aria-disabled&#x3D;&quot;false&quot; href&#x3D;&quot;&#x2F;content&quot; style&#x3D;&quot;--mat-list-list-item...&quot; aria-current&#x3D;&quot;page&quot;&gt;</samp></td>
+                                    <td><samp>&quot;.mdc-list-item--activated&quot;</samp></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="accordionPasses">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <button
+                                class="btn btn-link"
+                                data-toggle="collapse"
+                                data-target="#passes"
+                                aria-expanded="false"
+                                aria-controls="passes"
+                            >
+                                axe returned 23 passed axe
+                                checks. Expand details on
+                                click
+                            </button>
+                        </h5>
+                    </div>
+                    <div
+                        id="passes"
+                        class="collapse"
+                        aria-labelledby="headingOne"
+                        data-parent="#accordionPasses"
+                    >
+                        <div class="card-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th width="5%">#</th>
+                                        <th width="50%">Description</th>
+                                        <th width="15%">Axe rule ID</th>
+                                        <th width="15%">WCAG</th>
+                                        <th width="15%">Nodes passed check</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Elements must only use supported ARIA attributes</td>
+                                        <td>aria-allowed-attr</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                        <td>19</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>ARIA attributes must be used as specified for the element&#39;s role</td>
+                                        <td>aria-conditional-attr</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                        <td>19</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Deprecated ARIA roles must not be used</td>
+                                        <td>aria-deprecated-role</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                        <td>6</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td>aria-hidden&#x3D;&quot;true&quot; must not be present on the document body</td>
+                                        <td>aria-hidden-body</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">5</th>
+                                        <td>ARIA hidden element must not be focusable or contain focusable elements</td>
+                                        <td>aria-hidden-focus</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                        <td>18</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">6</th>
+                                        <td>Elements must only use permitted ARIA attributes</td>
+                                        <td>aria-prohibited-attr</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                        <td>19</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">7</th>
+                                        <td>Required ARIA attributes must be provided</td>
+                                        <td>aria-required-attr</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                        <td>6</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">8</th>
+                                        <td>Certain ARIA roles must contain particular children</td>
+                                        <td>aria-required-children</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">9</th>
+                                        <td>Certain ARIA roles must be contained by particular parents</td>
+                                        <td>aria-required-parent</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                        <td>3</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">10</th>
+                                        <td>ARIA roles used must conform to valid values</td>
+                                        <td>aria-roles</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                        <td>6</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">11</th>
+                                        <td>ARIA attributes must conform to valid values</td>
+                                        <td>aria-valid-attr-value</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                        <td>19</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">12</th>
+                                        <td>ARIA attributes must conform to valid names</td>
+                                        <td>aria-valid-attr</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                        <td>19</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">13</th>
+                                        <td>Inline text spacing must be adjustable with custom stylesheets</td>
+                                        <td>avoid-inline-spacing</td>
+                                        <td>WCAG 2.1 Level AA</td>
+                                        <td>23</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">14</th>
+                                        <td>Page must have means to bypass repeated blocks</td>
+                                        <td>bypass</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">15</th>
+                                        <td>Elements must meet minimum color contrast ratio thresholds</td>
+                                        <td>color-contrast</td>
+                                        <td>WCAG 2.0 Level AA</td>
+                                        <td>14</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">16</th>
+                                        <td>Documents must have &lt;title&gt; element to aid in navigation</td>
+                                        <td>document-title</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">17</th>
+                                        <td>IDs used in ARIA and labels must be unique</td>
+                                        <td>duplicate-id-aria</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                        <td>2</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">18</th>
+                                        <td>&lt;html&gt; element must have a lang attribute</td>
+                                        <td>html-has-lang</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">19</th>
+                                        <td>&lt;html&gt; element must have a valid value for the lang attribute</td>
+                                        <td>html-lang-valid</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">20</th>
+                                        <td>Links must have discernible text</td>
+                                        <td>link-name</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                        <td>4</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">21</th>
+                                        <td>Zooming and scaling must not be disabled</td>
+                                        <td>meta-viewport</td>
+                                        <td>WCAG 2.0 Level AA</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">22</th>
+                                        <td>Interactive controls must not be nested</td>
+                                        <td>nested-interactive</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                        <td>14</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">23</th>
+                                        <td>Scrollable region must have keyboard access</td>
+                                        <td>scrollable-region-focusable</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                        <td>2</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="accordionIncomplete">
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0">
+                            <button
+                                class="btn btn-link"
+                                data-toggle="collapse"
+                                data-target="#incomplete"
+                                aria-expanded="false"
+                                aria-controls="incomplete"
+                            >
+                                axe returned 0 incomplete checks. Expand
+                                details on click
+                            </button>
+                        </h5>
+                    </div>
+                    <div
+                        id="incomplete"
+                        class="collapse"
+                        aria-labelledby="headingTwo"
+                        data-parent="#accordionIncomplete"
+                    >
+                        <div class="card-body">
+                            <p><em>What 'incomplete' axe checks means?</em></p>
+                            <p>
+                                Incomplete results were aborted and require further testing. This
+                                can happen either because of technical restrictions to what the rule
+                                can test, or because a javascript error occurred.
+                            </p>
+                            <p>
+                                <a
+                                    href="https://www.deque.com/axe/core-documentation/api-documentation/#results-object"
+                                    >Visit axe API Documentation</a
+                                >
+                                to learn more.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="accordionInapplicable">
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h5 class="mb-0">
+                            <button
+                                class="btn btn-link"
+                                data-toggle="collapse"
+                                data-target="#inapplicable"
+                                aria-expanded="false"
+                                aria-controls="inapplicable"
+                            >
+                                axe returned 36 inapplicable checks.
+                                Expand details on click
+                            </button>
+                        </h5>
+                    </div>
+                    <div
+                        id="inapplicable"
+                        class="collapse"
+                        aria-labelledby="headingThree"
+                        data-parent="#accordionInapplicable"
+                    >
+                        <div class="card-body">
+                            <p><em>What 'inapplicable' axe checks means?</em></p>
+                            <p>
+                                The inapplicable array lists all the rules for which no matching
+                                elements were found on the page.
+                            </p>
+                            <p>
+                                <a
+                                    href="https://www.deque.com/axe/core-documentation/api-documentation/#results-object"
+                                    >Visit axe API Documentation</a
+                                >
+                                to learn more.
+                            </p>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th width="5%">#</th>
+                                        <th width="50%">Description</th>
+                                        <th width="20%">Axe rule ID</th>
+                                        <th width="15%">WCAG</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Active &lt;area&gt; elements must have alternative text</td>
+                                        <td>area-alt</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>aria-braille attributes must have a non-braille equivalent</td>
+                                        <td>aria-braille-equivalent</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>ARIA commands must have an accessible name</td>
+                                        <td>aria-command-name</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td>ARIA input fields must have an accessible name</td>
+                                        <td>aria-input-field-name</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">5</th>
+                                        <td>ARIA meter nodes must have an accessible name</td>
+                                        <td>aria-meter-name</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">6</th>
+                                        <td>ARIA progressbar nodes must have an accessible name</td>
+                                        <td>aria-progressbar-name</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">7</th>
+                                        <td>ARIA toggle fields must have an accessible name</td>
+                                        <td>aria-toggle-field-name</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">8</th>
+                                        <td>ARIA tooltip nodes must have an accessible name</td>
+                                        <td>aria-tooltip-name</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">9</th>
+                                        <td>autocomplete attribute must be used correctly</td>
+                                        <td>autocomplete-valid</td>
+                                        <td>WCAG 2.1 Level AA</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">10</th>
+                                        <td>&lt;blink&gt; elements are deprecated and must not be used</td>
+                                        <td>blink</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">11</th>
+                                        <td>&lt;dl&gt; elements must only directly contain properly-ordered &lt;dt&gt; and &lt;dd&gt; groups, &lt;script&gt;, &lt;template&gt; or &lt;div&gt; elements</td>
+                                        <td>definition-list</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">12</th>
+                                        <td>&lt;dt&gt; and &lt;dd&gt; elements must be contained by a &lt;dl&gt;</td>
+                                        <td>dlitem</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">13</th>
+                                        <td>Form field must not have multiple label elements</td>
+                                        <td>form-field-multiple-labels</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">14</th>
+                                        <td>Frames with focusable content must not have tabindex&#x3D;-1</td>
+                                        <td>frame-focusable-content</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">15</th>
+                                        <td>Frames must have a unique title attribute</td>
+                                        <td>frame-title-unique</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">16</th>
+                                        <td>Frames must have an accessible name</td>
+                                        <td>frame-title</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">17</th>
+                                        <td>HTML elements with lang and xml:lang must have the same base language</td>
+                                        <td>html-xml-lang-mismatch</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">18</th>
+                                        <td>Input buttons must have discernible text</td>
+                                        <td>input-button-name</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">19</th>
+                                        <td>Image buttons must have alternative text</td>
+                                        <td>input-image-alt</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">20</th>
+                                        <td>Form elements must have labels</td>
+                                        <td>label</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">21</th>
+                                        <td>Links must be distinguishable without relying on color</td>
+                                        <td>link-in-text-block</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">22</th>
+                                        <td>&lt;ul&gt; and &lt;ol&gt; must only directly contain &lt;li&gt;, &lt;script&gt; or &lt;template&gt; elements</td>
+                                        <td>list</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">23</th>
+                                        <td>&lt;li&gt; elements must be contained in a &lt;ul&gt; or &lt;ol&gt;</td>
+                                        <td>listitem</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">24</th>
+                                        <td>&lt;marquee&gt; elements are deprecated and must not be used</td>
+                                        <td>marquee</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">25</th>
+                                        <td>Delayed refresh under 20 hours must not be used</td>
+                                        <td>meta-refresh</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">26</th>
+                                        <td>&lt;object&gt; elements must have alternative text</td>
+                                        <td>object-alt</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">27</th>
+                                        <td>[role&#x3D;&quot;img&quot;] elements must have alternative text</td>
+                                        <td>role-img-alt</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">28</th>
+                                        <td>Select element must have an accessible name</td>
+                                        <td>select-name</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">29</th>
+                                        <td>Server-side image maps must not be used</td>
+                                        <td>server-side-image-map</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">30</th>
+                                        <td>Summary elements must have discernible text</td>
+                                        <td>summary-name</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">31</th>
+                                        <td>&lt;svg&gt; elements with an img role must have alternative text</td>
+                                        <td>svg-img-alt</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">32</th>
+                                        <td>Table cell headers attributes must refer to other &lt;th&gt; elements in the same table</td>
+                                        <td>td-headers-attr</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">33</th>
+                                        <td>Table headers in a data table must refer to data cells</td>
+                                        <td>th-has-data-cells</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">34</th>
+                                        <td>lang attribute must have a valid value</td>
+                                        <td>valid-lang</td>
+                                        <td>WCAG 2.0 Level AA</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">35</th>
+                                        <td>&lt;video&gt; elements must have captions</td>
+                                        <td>video-caption</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">36</th>
+                                        <td>&lt;video&gt; or &lt;audio&gt; elements must not play automatically</td>
+                                        <td>no-autoplay-audio</td>
+                                        <td>WCAG 2.0 Level A</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

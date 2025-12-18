@@ -1,0 +1,7 @@
+{
+  "name": "axe-reporter",
+  "version": "1.0.0",
+  "dependencies": {
+    "axe-html-reporter": "^1.0.2"
+  }
+}

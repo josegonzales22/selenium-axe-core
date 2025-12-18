@@ -1,0 +1,2616 @@
+{
+  "inapplicable": [
+    {
+      "description": "Ensure \u003carea\u003e elements of image maps have alternative text",
+      "help": "Active \u003carea\u003e elements must have alternative text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/area-alt?application\u003daxeAPI",
+      "id": "area-alt",
+      "nodes": [],
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag244",
+        "wcag412",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.2.4.4",
+        "EN-9.4.1.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-1.1.2"
+      ]
+    },
+    {
+      "description": "Ensure aria-braillelabel and aria-brailleroledescription have a non-braille equivalent",
+      "help": "aria-braille attributes must have a non-braille equivalent",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-braille-equivalent?application\u003daxeAPI",
+      "id": "aria-braille-equivalent",
+      "nodes": [],
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2"
+      ]
+    },
+    {
+      "description": "Ensure every ARIA button, link and menuitem has an accessible name",
+      "help": "ARIA commands must have an accessible name",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-command-name?application\u003daxeAPI",
+      "id": "aria-command-name",
+      "nodes": [],
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-11.9.1"
+      ]
+    },
+    {
+      "description": "Ensure elements do not use deprecated roles",
+      "help": "Deprecated ARIA roles must not be used",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-deprecated-role?application\u003daxeAPI",
+      "id": "aria-deprecated-role",
+      "nodes": [],
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ]
+    },
+    {
+      "description": "Ensure every ARIA input field has an accessible name",
+      "help": "ARIA input fields must have an accessible name",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-input-field-name?application\u003daxeAPI",
+      "id": "aria-input-field-name",
+      "nodes": [],
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "TTv5",
+        "TT5.c",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-11.1.1"
+      ]
+    },
+    {
+      "description": "Ensure every ARIA meter node has an accessible name",
+      "help": "ARIA meter nodes must have an accessible name",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-meter-name?application\u003daxeAPI",
+      "id": "aria-meter-name",
+      "nodes": [],
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag111",
+        "EN-301-549",
+        "EN-9.1.1.1",
+        "RGAAv4",
+        "RGAA-11.1.1"
+      ]
+    },
+    {
+      "description": "Ensure every ARIA progressbar node has an accessible name",
+      "help": "ARIA progressbar nodes must have an accessible name",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-progressbar-name?application\u003daxeAPI",
+      "id": "aria-progressbar-name",
+      "nodes": [],
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag111",
+        "EN-301-549",
+        "EN-9.1.1.1",
+        "RGAAv4",
+        "RGAA-11.1.1"
+      ]
+    },
+    {
+      "description": "Ensure elements with ARIA roles have all required ARIA attributes",
+      "help": "Required ARIA attributes must be provided",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-required-attr?application\u003daxeAPI",
+      "id": "aria-required-attr",
+      "nodes": [],
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ]
+    },
+    {
+      "description": "Ensure elements with an ARIA role that require child roles contain them",
+      "help": "Certain ARIA roles must contain particular children",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-required-children?application\u003daxeAPI",
+      "id": "aria-required-children",
+      "nodes": [],
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag131",
+        "EN-301-549",
+        "EN-9.1.3.1",
+        "RGAAv4",
+        "RGAA-9.3.1"
+      ]
+    },
+    {
+      "description": "Ensure elements with an ARIA role that require parent roles are contained by them",
+      "help": "Certain ARIA roles must be contained by particular parents",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-required-parent?application\u003daxeAPI",
+      "id": "aria-required-parent",
+      "nodes": [],
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag131",
+        "EN-301-549",
+        "EN-9.1.3.1",
+        "RGAAv4",
+        "RGAA-9.3.1"
+      ]
+    },
+    {
+      "description": "Ensure all elements with a role attribute use a valid value",
+      "help": "ARIA roles used must conform to valid values",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-roles?application\u003daxeAPI",
+      "id": "aria-roles",
+      "nodes": [],
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ]
+    },
+    {
+      "description": "Ensure every ARIA toggle field has an accessible name",
+      "help": "ARIA toggle fields must have an accessible name",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-toggle-field-name?application\u003daxeAPI",
+      "id": "aria-toggle-field-name",
+      "nodes": [],
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "TTv5",
+        "TT5.c",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ]
+    },
+    {
+      "description": "Ensure every ARIA tooltip node has an accessible name",
+      "help": "ARIA tooltip nodes must have an accessible name",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-tooltip-name?application\u003daxeAPI",
+      "id": "aria-tooltip-name",
+      "nodes": [],
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2"
+      ]
+    },
+    {
+      "description": "Ensure the autocomplete attribute is correct and suitable for the form field",
+      "help": "autocomplete attribute must be used correctly",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/autocomplete-valid?application\u003daxeAPI",
+      "id": "autocomplete-valid",
+      "nodes": [],
+      "tags": [
+        "cat.forms",
+        "wcag21aa",
+        "wcag135",
+        "EN-301-549",
+        "EN-9.1.3.5",
+        "ACT",
+        "RGAAv4",
+        "RGAA-11.13.1"
+      ]
+    },
+    {
+      "description": "Ensure \u003cblink\u003e elements are not used",
+      "help": "\u003cblink\u003e elements are deprecated and must not be used",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/blink?application\u003daxeAPI",
+      "id": "blink",
+      "nodes": [],
+      "tags": [
+        "cat.time-and-media",
+        "wcag2a",
+        "wcag222",
+        "section508",
+        "section508.22.j",
+        "TTv5",
+        "TT2.b",
+        "EN-301-549",
+        "EN-9.2.2.2",
+        "RGAAv4",
+        "RGAA-13.8.1"
+      ]
+    },
+    {
+      "description": "Ensure each page has at least one mechanism for a user to bypass navigation and jump straight to the content",
+      "help": "Page must have means to bypass repeated blocks",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/bypass?application\u003daxeAPI",
+      "id": "bypass",
+      "nodes": [],
+      "tags": [
+        "cat.keyboard",
+        "wcag2a",
+        "wcag241",
+        "section508",
+        "section508.22.o",
+        "TTv5",
+        "TT9.a",
+        "EN-301-549",
+        "EN-9.2.4.1",
+        "RGAAv4",
+        "RGAA-12.7.1"
+      ]
+    },
+    {
+      "description": "Ensure \u003cdl\u003e elements are structured correctly",
+      "help": "\u003cdl\u003e elements must only directly contain properly-ordered \u003cdt\u003e and \u003cdd\u003e groups, \u003cscript\u003e, \u003ctemplate\u003e or \u003cdiv\u003e elements",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/definition-list?application\u003daxeAPI",
+      "id": "definition-list",
+      "nodes": [],
+      "tags": [
+        "cat.structure",
+        "wcag2a",
+        "wcag131",
+        "EN-301-549",
+        "EN-9.1.3.1",
+        "RGAAv4",
+        "RGAA-9.3.3"
+      ]
+    },
+    {
+      "description": "Ensure \u003cdt\u003e and \u003cdd\u003e elements are contained by a \u003cdl\u003e",
+      "help": "\u003cdt\u003e and \u003cdd\u003e elements must be contained by a \u003cdl\u003e",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/dlitem?application\u003daxeAPI",
+      "id": "dlitem",
+      "nodes": [],
+      "tags": [
+        "cat.structure",
+        "wcag2a",
+        "wcag131",
+        "EN-301-549",
+        "EN-9.1.3.1",
+        "RGAAv4",
+        "RGAA-9.3.3"
+      ]
+    },
+    {
+      "description": "Ensure \u003cframe\u003e and \u003ciframe\u003e elements with focusable content do not have tabindex\u003d-1",
+      "help": "Frames with focusable content must not have tabindex\u003d-1",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/frame-focusable-content?application\u003daxeAPI",
+      "id": "frame-focusable-content",
+      "nodes": [],
+      "tags": [
+        "cat.keyboard",
+        "wcag2a",
+        "wcag211",
+        "TTv5",
+        "TT4.a",
+        "EN-301-549",
+        "EN-9.2.1.1",
+        "RGAAv4",
+        "RGAA-7.3.2"
+      ]
+    },
+    {
+      "description": "Ensure \u003ciframe\u003e and \u003cframe\u003e elements contain a unique title attribute",
+      "help": "Frames must have a unique title attribute",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/frame-title-unique?application\u003daxeAPI",
+      "id": "frame-title-unique",
+      "nodes": [],
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag412",
+        "TTv5",
+        "TT12.d",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-2.2.1"
+      ]
+    },
+    {
+      "description": "Ensure \u003ciframe\u003e and \u003cframe\u003e elements have an accessible name",
+      "help": "Frames must have an accessible name",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/frame-title?application\u003daxeAPI",
+      "id": "frame-title",
+      "nodes": [],
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag412",
+        "section508",
+        "section508.22.i",
+        "TTv5",
+        "TT12.d",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-2.1.1"
+      ]
+    },
+    {
+      "description": "Ensure that HTML elements with both valid lang and xml:lang attributes agree on the base language of the page",
+      "help": "HTML elements with lang and xml:lang must have the same base language",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/html-xml-lang-mismatch?application\u003daxeAPI",
+      "id": "html-xml-lang-mismatch",
+      "nodes": [],
+      "tags": [
+        "cat.language",
+        "wcag2a",
+        "wcag311",
+        "EN-301-549",
+        "EN-9.3.1.1",
+        "ACT",
+        "RGAAv4",
+        "RGAA-8.3.1"
+      ]
+    },
+    {
+      "description": "Ensure \u003cimg\u003e elements have alternative text or a role of none or presentation",
+      "help": "Images must have alternative text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/image-alt?application\u003daxeAPI",
+      "id": "image-alt",
+      "nodes": [],
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag111",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT7.a",
+        "TT7.b",
+        "EN-301-549",
+        "EN-9.1.1.1",
+        "ACT",
+        "RGAAv4",
+        "RGAA-1.1.1"
+      ]
+    },
+    {
+      "description": "Ensure input buttons have discernible text",
+      "help": "Input buttons must have discernible text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/input-button-name?application\u003daxeAPI",
+      "id": "input-button-name",
+      "nodes": [],
+      "tags": [
+        "cat.name-role-value",
+        "wcag2a",
+        "wcag412",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT5.c",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-11.9.1"
+      ]
+    },
+    {
+      "description": "Ensure \u003cinput type\u003d\"image\"\u003e elements have alternative text",
+      "help": "Image buttons must have alternative text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/input-image-alt?application\u003daxeAPI",
+      "id": "input-image-alt",
+      "nodes": [],
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag111",
+        "wcag412",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT7.a",
+        "EN-301-549",
+        "EN-9.1.1.1",
+        "EN-9.4.1.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-1.1.3"
+      ]
+    },
+    {
+      "description": "Ensure links are distinguished from surrounding text in a way that does not rely on color",
+      "help": "Links must be distinguishable without relying on color",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-in-text-block?application\u003daxeAPI",
+      "id": "link-in-text-block",
+      "nodes": [],
+      "tags": [
+        "cat.color",
+        "wcag2a",
+        "wcag141",
+        "TTv5",
+        "TT13.a",
+        "EN-301-549",
+        "EN-9.1.4.1",
+        "RGAAv4",
+        "RGAA-10.6.1"
+      ]
+    },
+    {
+      "description": "Ensure links have discernible text",
+      "help": "Links must have discernible text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-name?application\u003daxeAPI",
+      "id": "link-name",
+      "nodes": [],
+      "tags": [
+        "cat.name-role-value",
+        "wcag2a",
+        "wcag244",
+        "wcag412",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.2.4.4",
+        "EN-9.4.1.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-6.2.1"
+      ]
+    },
+    {
+      "description": "Ensure \u003cmarquee\u003e elements are not used",
+      "help": "\u003cmarquee\u003e elements are deprecated and must not be used",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/marquee?application\u003daxeAPI",
+      "id": "marquee",
+      "nodes": [],
+      "tags": [
+        "cat.parsing",
+        "wcag2a",
+        "wcag222",
+        "TTv5",
+        "TT2.b",
+        "EN-301-549",
+        "EN-9.2.2.2",
+        "RGAAv4",
+        "RGAA-13.8.1"
+      ]
+    },
+    {
+      "description": "Ensure \u003cmeta http-equiv\u003d\"refresh\"\u003e is not used for delayed refresh",
+      "help": "Delayed refresh under 20 hours must not be used",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/meta-refresh?application\u003daxeAPI",
+      "id": "meta-refresh",
+      "nodes": [],
+      "tags": [
+        "cat.time-and-media",
+        "wcag2a",
+        "wcag221",
+        "TTv5",
+        "TT8.a",
+        "EN-301-549",
+        "EN-9.2.2.1",
+        "RGAAv4",
+        "RGAA-13.1.2"
+      ]
+    },
+    {
+      "description": "Ensure \u003cobject\u003e elements have alternative text",
+      "help": "\u003cobject\u003e elements must have alternative text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/object-alt?application\u003daxeAPI",
+      "id": "object-alt",
+      "nodes": [],
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag111",
+        "section508",
+        "section508.22.a",
+        "EN-301-549",
+        "EN-9.1.1.1",
+        "RGAAv4",
+        "RGAA-1.1.6"
+      ]
+    },
+    {
+      "description": "Ensure [role\u003d\"img\"] elements have alternative text",
+      "help": "[role\u003d\"img\"] elements must have alternative text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/role-img-alt?application\u003daxeAPI",
+      "id": "role-img-alt",
+      "nodes": [],
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag111",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT7.a",
+        "EN-301-549",
+        "EN-9.1.1.1",
+        "ACT",
+        "RGAAv4",
+        "RGAA-1.1.1"
+      ]
+    },
+    {
+      "description": "Ensure elements that have scrollable content are accessible by keyboard",
+      "help": "Scrollable region must have keyboard access",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/scrollable-region-focusable?application\u003daxeAPI",
+      "id": "scrollable-region-focusable",
+      "nodes": [],
+      "tags": [
+        "cat.keyboard",
+        "wcag2a",
+        "wcag211",
+        "wcag213",
+        "TTv5",
+        "TT4.a",
+        "EN-301-549",
+        "EN-9.2.1.1",
+        "EN-9.2.1.3",
+        "RGAAv4",
+        "RGAA-7.3.2"
+      ]
+    },
+    {
+      "description": "Ensure select element has an accessible name",
+      "help": "Select element must have an accessible name",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/select-name?application\u003daxeAPI",
+      "id": "select-name",
+      "nodes": [],
+      "tags": [
+        "cat.forms",
+        "wcag2a",
+        "wcag412",
+        "section508",
+        "section508.22.n",
+        "TTv5",
+        "TT5.c",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-11.1.1"
+      ]
+    },
+    {
+      "description": "Ensure that server-side image maps are not used",
+      "help": "Server-side image maps must not be used",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/server-side-image-map?application\u003daxeAPI",
+      "id": "server-side-image-map",
+      "nodes": [],
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag211",
+        "section508",
+        "section508.22.f",
+        "TTv5",
+        "TT4.a",
+        "EN-301-549",
+        "EN-9.2.1.1",
+        "RGAAv4",
+        "RGAA-1.1.4"
+      ]
+    },
+    {
+      "description": "Ensure summary elements have discernible text",
+      "help": "Summary elements must have discernible text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/summary-name?application\u003daxeAPI",
+      "id": "summary-name",
+      "nodes": [],
+      "tags": [
+        "cat.name-role-value",
+        "wcag2a",
+        "wcag412",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.4.1.2"
+      ]
+    },
+    {
+      "description": "Ensure \u003csvg\u003e elements with an img, graphics-document or graphics-symbol role have accessible text",
+      "help": "\u003csvg\u003e elements with an img role must have alternative text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/svg-img-alt?application\u003daxeAPI",
+      "id": "svg-img-alt",
+      "nodes": [],
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag111",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT7.a",
+        "EN-301-549",
+        "EN-9.1.1.1",
+        "ACT",
+        "RGAAv4",
+        "RGAA-1.1.5"
+      ]
+    },
+    {
+      "description": "Ensure that each cell in a table that uses the headers attribute refers only to other \u003cth\u003e elements in that table",
+      "help": "Table cell headers attributes must refer to other \u003cth\u003e elements in the same table",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/td-headers-attr?application\u003daxeAPI",
+      "id": "td-headers-attr",
+      "nodes": [],
+      "tags": [
+        "cat.tables",
+        "wcag2a",
+        "wcag131",
+        "section508",
+        "section508.22.g",
+        "TTv5",
+        "TT14.b",
+        "EN-301-549",
+        "EN-9.1.3.1",
+        "RGAAv4",
+        "RGAA-5.7.4"
+      ]
+    },
+    {
+      "description": "Ensure that \u003cth\u003e elements and elements with role\u003dcolumnheader/rowheader have data cells they describe",
+      "help": "Table headers in a data table must refer to data cells",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/th-has-data-cells?application\u003daxeAPI",
+      "id": "th-has-data-cells",
+      "nodes": [],
+      "tags": [
+        "cat.tables",
+        "wcag2a",
+        "wcag131",
+        "section508",
+        "section508.22.g",
+        "TTv5",
+        "TT14.b",
+        "EN-301-549",
+        "EN-9.1.3.1",
+        "RGAAv4",
+        "RGAA-5.7.1"
+      ]
+    },
+    {
+      "description": "Ensure lang attributes have valid values",
+      "help": "lang attribute must have a valid value",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/valid-lang?application\u003daxeAPI",
+      "id": "valid-lang",
+      "nodes": [],
+      "tags": [
+        "cat.language",
+        "wcag2aa",
+        "wcag312",
+        "TTv5",
+        "TT11.b",
+        "EN-301-549",
+        "EN-9.3.1.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-8.7.1"
+      ]
+    },
+    {
+      "description": "Ensure \u003cvideo\u003e elements have captions",
+      "help": "\u003cvideo\u003e elements must have captions",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/video-caption?application\u003daxeAPI",
+      "id": "video-caption",
+      "nodes": [],
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag122",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT17.a",
+        "EN-301-549",
+        "EN-9.1.2.2",
+        "RGAAv4",
+        "RGAA-4.3.1"
+      ]
+    },
+    {
+      "description": "Ensure \u003cvideo\u003e or \u003caudio\u003e elements do not autoplay audio for more than 3 seconds without a control mechanism to stop or mute the audio",
+      "help": "\u003cvideo\u003e or \u003caudio\u003e elements must not play automatically",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/no-autoplay-audio?application\u003daxeAPI",
+      "id": "no-autoplay-audio",
+      "nodes": [],
+      "tags": [
+        "cat.time-and-media",
+        "wcag2a",
+        "wcag142",
+        "TTv5",
+        "TT2.a",
+        "EN-301-549",
+        "EN-9.1.4.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-4.10.1"
+      ]
+    }
+  ],
+  "incomplete": [
+    {
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application\u003daxeAPI",
+      "id": "color-contrast",
+      "impact": "serious",
+      "nodes": [
+        {
+          "all": [],
+          "any": [
+            {
+              "data": {
+                "contrastRatio": 0,
+                "expectedContrastRatio": "4.5:1",
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap"
+              },
+              "id": "color-contrast",
+              "impact": "serious",
+              "message": "Element\u0027s background color could not be determined because it is overlapped by another element",
+              "relatedNodes": []
+            }
+          ],
+          "failureSummary": "Fix any of the following:\n  Element\u0027s background color could not be determined because it is overlapped by another element",
+          "html": "\u003cinput matinput\u003d\"\" type\u003d\"email\" placeholder\u003d\"Enter your email\" name\u003d\"email\" required\u003d\"\" class\u003d\"mat-mdc-input-elemen...\" id\u003d\"mat-input-0\" aria-required\u003d\"true\" aria-invalid\u003d\"false\"\u003e",
+          "impact": "serious",
+          "none": [],
+          "target": [
+            "#mat-input-0"
+          ]
+        },
+        {
+          "all": [],
+          "any": [
+            {
+              "data": {
+                "contrastRatio": 0,
+                "expectedContrastRatio": "4.5:1",
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap"
+              },
+              "id": "color-contrast",
+              "impact": "serious",
+              "message": "Element\u0027s background color could not be determined because it is overlapped by another element",
+              "relatedNodes": []
+            }
+          ],
+          "failureSummary": "Fix any of the following:\n  Element\u0027s background color could not be determined because it is overlapped by another element",
+          "html": "\u003cinput matinput\u003d\"\" placeholder\u003d\"Enter your password\" name\u003d\"password\" required\u003d\"\" class\u003d\"mat-mdc-input-elemen...\" type\u003d\"password\" id\u003d\"mat-input-1\" aria-required\u003d\"true\" aria-invalid\u003d\"false\"\u003e",
+          "impact": "serious",
+          "none": [],
+          "target": [
+            "#mat-input-1"
+          ]
+        }
+      ],
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ]
+    }
+  ],
+  "passes": [
+    {
+      "description": "Ensure an element\u0027s role supports its ARIA attributes",
+      "help": "Elements must only use supported ARIA attributes",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-allowed-attr?application\u003daxeAPI",
+      "id": "aria-allowed-attr",
+      "nodes": [
+        {
+          "all": [
+            {
+              "id": "aria-allowed-attr",
+              "impact": "critical",
+              "message": "ARIA attributes are used correctly for the defined role",
+              "relatedNodes": []
+            }
+          ],
+          "any": [],
+          "html": "\u003cinput matinput\u003d\"\" type\u003d\"email\" placeholder\u003d\"Enter your email\" name\u003d\"email\" required\u003d\"\" class\u003d\"mat-mdc-input-elemen...\" id\u003d\"mat-input-0\" aria-required\u003d\"true\" aria-invalid\u003d\"false\"\u003e",
+          "none": [
+            {
+              "id": "aria-unsupported-attr",
+              "impact": "critical",
+              "message": "ARIA attribute is supported",
+              "relatedNodes": []
+            }
+          ],
+          "target": [
+            "#mat-input-0"
+          ]
+        },
+        {
+          "all": [
+            {
+              "id": "aria-allowed-attr",
+              "impact": "critical",
+              "message": "ARIA attributes are used correctly for the defined role",
+              "relatedNodes": []
+            }
+          ],
+          "any": [],
+          "html": "\u003cdiv aria-atomic\u003d\"true\" aria-live\u003d\"polite\" class\u003d\"mat-mdc-form-field-hint-wrapper\"\u003e\u003c!----\u003e\u003c!----\u003e\u003cdiv class\u003d\"mat-mdc-form-field-hint-spacer\"\u003e\u003c/div\u003e\u003c!----\u003e\u003c/div\u003e",
+          "none": [
+            {
+              "id": "aria-unsupported-attr",
+              "impact": "critical",
+              "message": "ARIA attribute is supported",
+              "relatedNodes": []
+            }
+          ],
+          "target": [
+            "mat-form-field:nth-child(1) \u003e .mat-mdc-form-field-subscript-wrapper.mat-mdc-form-field-bottom-align.mat-mdc-form-field-subscript-dynamic-size \u003e .mat-mdc-form-field-hint-wrapper[aria-atomic\u003d\"true\"][aria-live\u003d\"polite\"]"
+          ]
+        },
+        {
+          "all": [
+            {
+              "id": "aria-allowed-attr",
+              "impact": "critical",
+              "message": "ARIA attributes are used correctly for the defined role",
+              "relatedNodes": []
+            }
+          ],
+          "any": [],
+          "html": "\u003cinput matinput\u003d\"\" placeholder\u003d\"Enter your password\" name\u003d\"password\" required\u003d\"\" class\u003d\"mat-mdc-input-elemen...\" type\u003d\"password\" id\u003d\"mat-input-1\" aria-required\u003d\"true\" aria-invalid\u003d\"false\"\u003e",
+          "none": [
+            {
+              "id": "aria-unsupported-attr",
+              "impact": "critical",
+              "message": "ARIA attribute is supported",
+              "relatedNodes": []
+            }
+          ],
+          "target": [
+            "#mat-input-1"
+          ]
+        },
+        {
+          "all": [
+            {
+              "id": "aria-allowed-attr",
+              "impact": "critical",
+              "message": "ARIA attributes are used correctly for the defined role",
+              "relatedNodes": []
+            }
+          ],
+          "any": [],
+          "html": "\u003cdiv aria-atomic\u003d\"true\" aria-live\u003d\"polite\" class\u003d\"mat-mdc-form-field-hint-wrapper\"\u003e\u003c!----\u003e\u003c!----\u003e\u003cdiv class\u003d\"mat-mdc-form-field-hint-spacer\"\u003e\u003c/div\u003e\u003c!----\u003e\u003c/div\u003e",
+          "none": [
+            {
+              "id": "aria-unsupported-attr",
+              "impact": "critical",
+              "message": "ARIA attribute is supported",
+              "relatedNodes": []
+            }
+          ],
+          "target": [
+            "mat-form-field:nth-child(2) \u003e .mat-mdc-form-field-subscript-wrapper.mat-mdc-form-field-bottom-align.mat-mdc-form-field-subscript-dynamic-size \u003e .mat-mdc-form-field-hint-wrapper[aria-atomic\u003d\"true\"][aria-live\u003d\"polite\"]"
+          ]
+        },
+        {
+          "all": [
+            {
+              "id": "aria-allowed-attr",
+              "impact": "critical",
+              "message": "ARIA attributes are used correctly for the defined role",
+              "relatedNodes": []
+            }
+          ],
+          "any": [],
+          "html": "\u003cdiv class\u003d\"cdk-live-announcer-element cdk-visually-hidden\" aria-atomic\u003d\"true\" aria-live\u003d\"polite\" id\u003d\"cdk-live-announcer-0\"\u003e\u003c/div\u003e",
+          "none": [
+            {
+              "id": "aria-unsupported-attr",
+              "impact": "critical",
+              "message": "ARIA attribute is supported",
+              "relatedNodes": []
+            }
+          ],
+          "target": [
+            "#cdk-live-announcer-0"
+          ]
+        }
+      ],
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ]
+    },
+    {
+      "description": "Ensure ARIA attributes are used as described in the specification of the element\u0027s role",
+      "help": "ARIA attributes must be used as specified for the element\u0027s role",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-conditional-attr?application\u003daxeAPI",
+      "id": "aria-conditional-attr",
+      "nodes": [
+        {
+          "all": [
+            {
+              "id": "aria-conditional-attr",
+              "impact": "serious",
+              "message": "ARIA attribute is allowed",
+              "relatedNodes": []
+            }
+          ],
+          "any": [],
+          "html": "\u003cinput matinput\u003d\"\" type\u003d\"email\" placeholder\u003d\"Enter your email\" name\u003d\"email\" required\u003d\"\" class\u003d\"mat-mdc-input-elemen...\" id\u003d\"mat-input-0\" aria-required\u003d\"true\" aria-invalid\u003d\"false\"\u003e",
+          "none": [],
+          "target": [
+            "#mat-input-0"
+          ]
+        },
+        {
+          "all": [
+            {
+              "id": "aria-conditional-attr",
+              "impact": "serious",
+              "message": "ARIA attribute is allowed",
+              "relatedNodes": []
+            }
+          ],
+          "any": [],
+          "html": "\u003cdiv aria-atomic\u003d\"true\" aria-live\u003d\"polite\" class\u003d\"mat-mdc-form-field-hint-wrapper\"\u003e\u003c!----\u003e\u003c!----\u003e\u003cdiv class\u003d\"mat-mdc-form-field-hint-spacer\"\u003e\u003c/div\u003e\u003c!----\u003e\u003c/div\u003e",
+          "none": [],
+          "target": [
+            "mat-form-field:nth-child(1) \u003e .mat-mdc-form-field-subscript-wrapper.mat-mdc-form-field-bottom-align.mat-mdc-form-field-subscript-dynamic-size \u003e .mat-mdc-form-field-hint-wrapper[aria-atomic\u003d\"true\"][aria-live\u003d\"polite\"]"
+          ]
+        },
+        {
+          "all": [
+            {
+              "id": "aria-conditional-attr",
+              "impact": "serious",
+              "message": "ARIA attribute is allowed",
+              "relatedNodes": []
+            }
+          ],
+          "any": [],
+          "html": "\u003cinput matinput\u003d\"\" placeholder\u003d\"Enter your password\" name\u003d\"password\" required\u003d\"\" class\u003d\"mat-mdc-input-elemen...\" type\u003d\"password\" id\u003d\"mat-input-1\" aria-required\u003d\"true\" aria-invalid\u003d\"false\"\u003e",
+          "none": [],
+          "target": [
+            "#mat-input-1"
+          ]
+        },
+        {
+          "all": [
+            {
+              "id": "aria-conditional-attr",
+              "impact": "serious",
+              "message": "ARIA attribute is allowed",
+              "relatedNodes": []
+            }
+          ],
+          "any": [],
+          "html": "\u003cdiv aria-atomic\u003d\"true\" aria-live\u003d\"polite\" class\u003d\"mat-mdc-form-field-hint-wrapper\"\u003e\u003c!----\u003e\u003c!----\u003e\u003cdiv class\u003d\"mat-mdc-form-field-hint-spacer\"\u003e\u003c/div\u003e\u003c!----\u003e\u003c/div\u003e",
+          "none": [],
+          "target": [
+            "mat-form-field:nth-child(2) \u003e .mat-mdc-form-field-subscript-wrapper.mat-mdc-form-field-bottom-align.mat-mdc-form-field-subscript-dynamic-size \u003e .mat-mdc-form-field-hint-wrapper[aria-atomic\u003d\"true\"][aria-live\u003d\"polite\"]"
+          ]
+        },
+        {
+          "all": [
+            {
+              "id": "aria-conditional-attr",
+              "impact": "serious",
+              "message": "ARIA attribute is allowed",
+              "relatedNodes": []
+            }
+          ],
+          "any": [],
+          "html": "\u003cdiv class\u003d\"cdk-live-announcer-element cdk-visually-hidden\" aria-atomic\u003d\"true\" aria-live\u003d\"polite\" id\u003d\"cdk-live-announcer-0\"\u003e\u003c/div\u003e",
+          "none": [],
+          "target": [
+            "#cdk-live-announcer-0"
+          ]
+        }
+      ],
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ]
+    },
+    {
+      "description": "Ensure aria-hidden\u003d\"true\" is not present on the document body.",
+      "help": "aria-hidden\u003d\"true\" must not be present on the document body",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-hidden-body?application\u003daxeAPI",
+      "id": "aria-hidden-body",
+      "nodes": [
+        {
+          "all": [],
+          "any": [
+            {
+              "id": "aria-hidden-body",
+              "impact": "critical",
+              "message": "No aria-hidden attribute is present on document body",
+              "relatedNodes": []
+            }
+          ],
+          "html": "\u003cbody\u003e",
+          "none": [],
+          "target": [
+            "body"
+          ]
+        }
+      ],
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag131",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.1.3.1",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ]
+    },
+    {
+      "description": "Ensure aria-hidden elements are not focusable nor contain focusable elements",
+      "help": "ARIA hidden element must not be focusable or contain focusable elements",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-hidden-focus?application\u003daxeAPI",
+      "id": "aria-hidden-focus",
+      "nodes": [
+        {
+          "all": [
+            {
+              "id": "focusable-modal-open",
+              "impact": "serious",
+              "message": "No focusable elements while a modal is open",
+              "relatedNodes": []
+            },
+            {
+              "id": "focusable-disabled",
+              "impact": "serious",
+              "message": "No focusable elements contained within element",
+              "relatedNodes": []
+            },
+            {
+              "id": "focusable-not-tabbable",
+              "impact": "serious",
+              "message": "No focusable elements contained within element",
+              "relatedNodes": []
+            }
+          ],
+          "any": [],
+          "html": "\u003cspan aria-hidden\u003d\"true\" class\u003d\"mat-mdc-form-field-required-marker mdc-floating-label--required\"\u003e\u003c/span\u003e",
+          "none": [],
+          "target": [
+            "#mat-mdc-form-field-label-0 \u003e .mat-mdc-form-field-required-marker.mdc-floating-label--required[aria-hidden\u003d\"true\"]"
+          ]
+        },
+        {
+          "all": [
+            {
+              "id": "focusable-modal-open",
+              "impact": "serious",
+              "message": "No focusable elements while a modal is open",
+              "relatedNodes": []
+            },
+            {
+              "id": "focusable-disabled",
+              "impact": "serious",
+              "message": "No focusable elements contained within element",
+              "relatedNodes": []
+            },
+            {
+              "id": "focusable-not-tabbable",
+              "impact": "serious",
+              "message": "No focusable elements contained within element",
+              "relatedNodes": []
+            }
+          ],
+          "any": [],
+          "html": "\u003cmat-icon role\u003d\"img\" matsuffix\u003d\"\" class\u003d\"mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color\" aria-hidden\u003d\"true\" data-mat-icon-type\u003d\"font\"\u003eemail\u003c/mat-icon\u003e",
+          "none": [],
+          "target": [
+            ".mat-mdc-form-field-icon-suffix \u003e mat-icon"
+          ]
+        },
+        {
+          "all": [
+            {
+              "id": "focusable-modal-open",
+              "impact": "serious",
+              "message": "No focusable elements while a modal is open",
+              "relatedNodes": []
+            },
+            {
+              "id": "focusable-disabled",
+              "impact": "serious",
+              "message": "No focusable elements contained within element",
+              "relatedNodes": []
+            },
+            {
+              "id": "focusable-not-tabbable",
+              "impact": "serious",
+              "message": "No focusable elements contained within element",
+              "relatedNodes": []
+            }
+          ],
+          "any": [],
+          "html": "\u003cspan aria-hidden\u003d\"true\" class\u003d\"mat-mdc-form-field-required-marker mdc-floating-label--required\"\u003e\u003c/span\u003e",
+          "none": [],
+          "target": [
+            "#mat-mdc-form-field-label-1 \u003e .mat-mdc-form-field-required-marker.mdc-floating-label--required[aria-hidden\u003d\"true\"]"
+          ]
+        },
+        {
+          "all": [
+            {
+              "id": "focusable-modal-open",
+              "impact": "serious",
+              "message": "No focusable elements while a modal is open",
+              "relatedNodes": []
+            },
+            {
+              "id": "focusable-disabled",
+              "impact": "serious",
+              "message": "No focusable elements contained within element",
+              "relatedNodes": []
+            },
+            {
+              "id": "focusable-not-tabbable",
+              "impact": "serious",
+              "message": "No focusable elements contained within element",
+              "relatedNodes": []
+            }
+          ],
+          "any": [],
+          "html": "\u003cmat-icon role\u003d\"img\" class\u003d\"mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color\" aria-hidden\u003d\"true\" data-mat-icon-type\u003d\"font\"\u003evisibility_off\u003c/mat-icon\u003e",
+          "none": [],
+          "target": [
+            ".mdc-icon-button \u003e mat-icon"
+          ]
+        }
+      ],
+      "tags": [
+        "cat.name-role-value",
+        "wcag2a",
+        "wcag412",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ]
+    },
+    {
+      "description": "Ensure ARIA attributes are not prohibited for an element\u0027s role",
+      "help": "Elements must only use permitted ARIA attributes",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-prohibited-attr?application\u003daxeAPI",
+      "id": "aria-prohibited-attr",
+      "nodes": [
+        {
+          "all": [],
+          "any": [],
+          "html": "\u003cinput matinput\u003d\"\" type\u003d\"email\" placeholder\u003d\"Enter your email\" name\u003d\"email\" required\u003d\"\" class\u003d\"mat-mdc-input-elemen...\" id\u003d\"mat-input-0\" aria-required\u003d\"true\" aria-invalid\u003d\"false\"\u003e",
+          "none": [
+            {
+              "id": "aria-prohibited-attr",
+              "impact": "serious",
+              "message": "ARIA attribute is allowed",
+              "relatedNodes": []
+            }
+          ],
+          "target": [
+            "#mat-input-0"
+          ]
+        },
+        {
+          "all": [],
+          "any": [],
+          "html": "\u003cdiv aria-atomic\u003d\"true\" aria-live\u003d\"polite\" class\u003d\"mat-mdc-form-field-hint-wrapper\"\u003e\u003c!----\u003e\u003c!----\u003e\u003cdiv class\u003d\"mat-mdc-form-field-hint-spacer\"\u003e\u003c/div\u003e\u003c!----\u003e\u003c/div\u003e",
+          "none": [
+            {
+              "id": "aria-prohibited-attr",
+              "impact": "serious",
+              "message": "ARIA attribute is allowed",
+              "relatedNodes": []
+            }
+          ],
+          "target": [
+            "mat-form-field:nth-child(1) \u003e .mat-mdc-form-field-subscript-wrapper.mat-mdc-form-field-bottom-align.mat-mdc-form-field-subscript-dynamic-size \u003e .mat-mdc-form-field-hint-wrapper[aria-atomic\u003d\"true\"][aria-live\u003d\"polite\"]"
+          ]
+        },
+        {
+          "all": [],
+          "any": [],
+          "html": "\u003cinput matinput\u003d\"\" placeholder\u003d\"Enter your password\" name\u003d\"password\" required\u003d\"\" class\u003d\"mat-mdc-input-elemen...\" type\u003d\"password\" id\u003d\"mat-input-1\" aria-required\u003d\"true\" aria-invalid\u003d\"false\"\u003e",
+          "none": [
+            {
+              "id": "aria-prohibited-attr",
+              "impact": "serious",
+              "message": "ARIA attribute is allowed",
+              "relatedNodes": []
+            }
+          ],
+          "target": [
+            "#mat-input-1"
+          ]
+        },
+        {
+          "all": [],
+          "any": [],
+          "html": "\u003cdiv aria-atomic\u003d\"true\" aria-live\u003d\"polite\" class\u003d\"mat-mdc-form-field-hint-wrapper\"\u003e\u003c!----\u003e\u003c!----\u003e\u003cdiv class\u003d\"mat-mdc-form-field-hint-spacer\"\u003e\u003c/div\u003e\u003c!----\u003e\u003c/div\u003e",
+          "none": [
+            {
+              "id": "aria-prohibited-attr",
+              "impact": "serious",
+              "message": "ARIA attribute is allowed",
+              "relatedNodes": []
+            }
+          ],
+          "target": [
+            "mat-form-field:nth-child(2) \u003e .mat-mdc-form-field-subscript-wrapper.mat-mdc-form-field-bottom-align.mat-mdc-form-field-subscript-dynamic-size \u003e .mat-mdc-form-field-hint-wrapper[aria-atomic\u003d\"true\"][aria-live\u003d\"polite\"]"
+          ]
+        },
+        {
+          "all": [],
+          "any": [],
+          "html": "\u003cdiv class\u003d\"cdk-live-announcer-element cdk-visually-hidden\" aria-atomic\u003d\"true\" aria-live\u003d\"polite\" id\u003d\"cdk-live-announcer-0\"\u003e\u003c/div\u003e",
+          "none": [
+            {
+              "id": "aria-prohibited-attr",
+              "impact": "serious",
+              "message": "ARIA attribute is allowed",
+              "relatedNodes": []
+            }
+          ],
+          "target": [
+            "#cdk-live-announcer-0"
+          ]
+        }
+      ],
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ]
+    },
+    {
+      "description": "Ensure all ARIA attributes have valid values",
+      "help": "ARIA attributes must conform to valid values",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-valid-attr-value?application\u003daxeAPI",
+      "id": "aria-valid-attr-value",
+      "nodes": [
+        {
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "impact": "critical",
+              "message": "ARIA attribute values are valid",
+              "relatedNodes": []
+            },
+            {
+              "id": "aria-errormessage",
+              "impact": "critical",
+              "message": "aria-errormessage exists and references elements visible to screen readers that use a supported aria-errormessage technique",
+              "relatedNodes": []
+            },
+            {
+              "id": "aria-level",
+              "impact": "critical",
+              "message": "aria-level values are valid",
+              "relatedNodes": []
+            }
+          ],
+          "any": [],
+          "html": "\u003cinput matinput\u003d\"\" type\u003d\"email\" placeholder\u003d\"Enter your email\" name\u003d\"email\" required\u003d\"\" class\u003d\"mat-mdc-input-elemen...\" id\u003d\"mat-input-0\" aria-required\u003d\"true\" aria-invalid\u003d\"false\"\u003e",
+          "none": [],
+          "target": [
+            "#mat-input-0"
+          ]
+        },
+        {
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "impact": "critical",
+              "message": "ARIA attribute values are valid",
+              "relatedNodes": []
+            },
+            {
+              "id": "aria-errormessage",
+              "impact": "critical",
+              "message": "aria-errormessage exists and references elements visible to screen readers that use a supported aria-errormessage technique",
+              "relatedNodes": []
+            },
+            {
+              "id": "aria-level",
+              "impact": "critical",
+              "message": "aria-level values are valid",
+              "relatedNodes": []
+            }
+          ],
+          "any": [],
+          "html": "\u003cdiv aria-atomic\u003d\"true\" aria-live\u003d\"polite\" class\u003d\"mat-mdc-form-field-hint-wrapper\"\u003e\u003c!----\u003e\u003c!----\u003e\u003cdiv class\u003d\"mat-mdc-form-field-hint-spacer\"\u003e\u003c/div\u003e\u003c!----\u003e\u003c/div\u003e",
+          "none": [],
+          "target": [
+            "mat-form-field:nth-child(1) \u003e .mat-mdc-form-field-subscript-wrapper.mat-mdc-form-field-bottom-align.mat-mdc-form-field-subscript-dynamic-size \u003e .mat-mdc-form-field-hint-wrapper[aria-atomic\u003d\"true\"][aria-live\u003d\"polite\"]"
+          ]
+        },
+        {
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "impact": "critical",
+              "message": "ARIA attribute values are valid",
+              "relatedNodes": []
+            },
+            {
+              "id": "aria-errormessage",
+              "impact": "critical",
+              "message": "aria-errormessage exists and references elements visible to screen readers that use a supported aria-errormessage technique",
+              "relatedNodes": []
+            },
+            {
+              "id": "aria-level",
+              "impact": "critical",
+              "message": "aria-level values are valid",
+              "relatedNodes": []
+            }
+          ],
+          "any": [],
+          "html": "\u003cinput matinput\u003d\"\" placeholder\u003d\"Enter your password\" name\u003d\"password\" required\u003d\"\" class\u003d\"mat-mdc-input-elemen...\" type\u003d\"password\" id\u003d\"mat-input-1\" aria-required\u003d\"true\" aria-invalid\u003d\"false\"\u003e",
+          "none": [],
+          "target": [
+            "#mat-input-1"
+          ]
+        },
+        {
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "impact": "critical",
+              "message": "ARIA attribute values are valid",
+              "relatedNodes": []
+            },
+            {
+              "id": "aria-errormessage",
+              "impact": "critical",
+              "message": "aria-errormessage exists and references elements visible to screen readers that use a supported aria-errormessage technique",
+              "relatedNodes": []
+            },
+            {
+              "id": "aria-level",
+              "impact": "critical",
+              "message": "aria-level values are valid",
+              "relatedNodes": []
+            }
+          ],
+          "any": [],
+          "html": "\u003cdiv aria-atomic\u003d\"true\" aria-live\u003d\"polite\" class\u003d\"mat-mdc-form-field-hint-wrapper\"\u003e\u003c!----\u003e\u003c!----\u003e\u003cdiv class\u003d\"mat-mdc-form-field-hint-spacer\"\u003e\u003c/div\u003e\u003c!----\u003e\u003c/div\u003e",
+          "none": [],
+          "target": [
+            "mat-form-field:nth-child(2) \u003e .mat-mdc-form-field-subscript-wrapper.mat-mdc-form-field-bottom-align.mat-mdc-form-field-subscript-dynamic-size \u003e .mat-mdc-form-field-hint-wrapper[aria-atomic\u003d\"true\"][aria-live\u003d\"polite\"]"
+          ]
+        },
+        {
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "impact": "critical",
+              "message": "ARIA attribute values are valid",
+              "relatedNodes": []
+            },
+            {
+              "id": "aria-errormessage",
+              "impact": "critical",
+              "message": "aria-errormessage exists and references elements visible to screen readers that use a supported aria-errormessage technique",
+              "relatedNodes": []
+            },
+            {
+              "id": "aria-level",
+              "impact": "critical",
+              "message": "aria-level values are valid",
+              "relatedNodes": []
+            }
+          ],
+          "any": [],
+          "html": "\u003cdiv class\u003d\"cdk-live-announcer-element cdk-visually-hidden\" aria-atomic\u003d\"true\" aria-live\u003d\"polite\" id\u003d\"cdk-live-announcer-0\"\u003e\u003c/div\u003e",
+          "none": [],
+          "target": [
+            "#cdk-live-announcer-0"
+          ]
+        }
+      ],
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ]
+    },
+    {
+      "description": "Ensure attributes that begin with aria- are valid ARIA attributes",
+      "help": "ARIA attributes must conform to valid names",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-valid-attr?application\u003daxeAPI",
+      "id": "aria-valid-attr",
+      "nodes": [
+        {
+          "all": [],
+          "any": [
+            {
+              "id": "aria-valid-attr",
+              "impact": "critical",
+              "message": "ARIA attribute name is valid",
+              "relatedNodes": []
+            }
+          ],
+          "html": "\u003cinput matinput\u003d\"\" type\u003d\"email\" placeholder\u003d\"Enter your email\" name\u003d\"email\" required\u003d\"\" class\u003d\"mat-mdc-input-elemen...\" id\u003d\"mat-input-0\" aria-required\u003d\"true\" aria-invalid\u003d\"false\"\u003e",
+          "none": [],
+          "target": [
+            "#mat-input-0"
+          ]
+        },
+        {
+          "all": [],
+          "any": [
+            {
+              "id": "aria-valid-attr",
+              "impact": "critical",
+              "message": "ARIA attribute name is valid",
+              "relatedNodes": []
+            }
+          ],
+          "html": "\u003cdiv aria-atomic\u003d\"true\" aria-live\u003d\"polite\" class\u003d\"mat-mdc-form-field-hint-wrapper\"\u003e\u003c!----\u003e\u003c!----\u003e\u003cdiv class\u003d\"mat-mdc-form-field-hint-spacer\"\u003e\u003c/div\u003e\u003c!----\u003e\u003c/div\u003e",
+          "none": [],
+          "target": [
+            "mat-form-field:nth-child(1) \u003e .mat-mdc-form-field-subscript-wrapper.mat-mdc-form-field-bottom-align.mat-mdc-form-field-subscript-dynamic-size \u003e .mat-mdc-form-field-hint-wrapper[aria-atomic\u003d\"true\"][aria-live\u003d\"polite\"]"
+          ]
+        },
+        {
+          "all": [],
+          "any": [
+            {
+              "id": "aria-valid-attr",
+              "impact": "critical",
+              "message": "ARIA attribute name is valid",
+              "relatedNodes": []
+            }
+          ],
+          "html": "\u003cinput matinput\u003d\"\" placeholder\u003d\"Enter your password\" name\u003d\"password\" required\u003d\"\" class\u003d\"mat-mdc-input-elemen...\" type\u003d\"password\" id\u003d\"mat-input-1\" aria-required\u003d\"true\" aria-invalid\u003d\"false\"\u003e",
+          "none": [],
+          "target": [
+            "#mat-input-1"
+          ]
+        },
+        {
+          "all": [],
+          "any": [
+            {
+              "id": "aria-valid-attr",
+              "impact": "critical",
+              "message": "ARIA attribute name is valid",
+              "relatedNodes": []
+            }
+          ],
+          "html": "\u003cdiv aria-atomic\u003d\"true\" aria-live\u003d\"polite\" class\u003d\"mat-mdc-form-field-hint-wrapper\"\u003e\u003c!----\u003e\u003c!----\u003e\u003cdiv class\u003d\"mat-mdc-form-field-hint-spacer\"\u003e\u003c/div\u003e\u003c!----\u003e\u003c/div\u003e",
+          "none": [],
+          "target": [
+            "mat-form-field:nth-child(2) \u003e .mat-mdc-form-field-subscript-wrapper.mat-mdc-form-field-bottom-align.mat-mdc-form-field-subscript-dynamic-size \u003e .mat-mdc-form-field-hint-wrapper[aria-atomic\u003d\"true\"][aria-live\u003d\"polite\"]"
+          ]
+        },
+        {
+          "all": [],
+          "any": [
+            {
+              "id": "aria-valid-attr",
+              "impact": "critical",
+              "message": "ARIA attribute name is valid",
+              "relatedNodes": []
+            }
+          ],
+          "html": "\u003cdiv class\u003d\"cdk-live-announcer-element cdk-visually-hidden\" aria-atomic\u003d\"true\" aria-live\u003d\"polite\" id\u003d\"cdk-live-announcer-0\"\u003e\u003c/div\u003e",
+          "none": [],
+          "target": [
+            "#cdk-live-announcer-0"
+          ]
+        }
+      ],
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ]
+    },
+    {
+      "description": "Ensure that text spacing set through style attributes can be adjusted with custom stylesheets",
+      "help": "Inline text spacing must be adjustable with custom stylesheets",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/avoid-inline-spacing?application\u003daxeAPI",
+      "id": "avoid-inline-spacing",
+      "nodes": [
+        {
+          "all": [
+            {
+              "id": "important-letter-spacing",
+              "impact": "serious",
+              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum",
+              "relatedNodes": []
+            },
+            {
+              "id": "important-word-spacing",
+              "impact": "serious",
+              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum",
+              "relatedNodes": []
+            },
+            {
+              "id": "important-line-height",
+              "impact": "serious",
+              "message": "line-height in the style attribute is not set to !important, or meets the minimum",
+              "relatedNodes": []
+            }
+          ],
+          "any": [],
+          "html": "\u003cdiv class\u003d\"mat-mdc-notch-piece mdc-notched-outline__notch\" style\u003d\"width: calc(52px * var(--mat-mdc-form-field-floating-label-scale, 0.75) + 9px);\"\u003e",
+          "none": [],
+          "target": [
+            "mat-form-field:nth-child(1) \u003e .mat-mdc-text-field-wrapper.mdc-text-field.mdc-text-field--outlined \u003e .mat-mdc-form-field-flex \u003e .mdc-notched-outline.mdc-notched-outline--upgraded.mdc-notched-outline--notched \u003e .mdc-notched-outline__notch.mat-mdc-notch-piece"
+          ]
+        },
+        {
+          "all": [
+            {
+              "id": "important-letter-spacing",
+              "impact": "serious",
+              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum",
+              "relatedNodes": []
+            },
+            {
+              "id": "important-word-spacing",
+              "impact": "serious",
+              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum",
+              "relatedNodes": []
+            },
+            {
+              "id": "important-line-height",
+              "impact": "serious",
+              "message": "line-height in the style attribute is not set to !important, or meets the minimum",
+              "relatedNodes": []
+            }
+          ],
+          "any": [],
+          "html": "\u003clabel matformfieldfloatinglabel\u003d\"\" class\u003d\"mdc-floating-label mat-mdc-floating-label mdc-floating-label--float-above\" id\u003d\"mat-mdc-form-field-label-0\" for\u003d\"mat-input-0\" style\u003d\"\"\u003e",
+          "none": [],
+          "target": [
+            "#mat-mdc-form-field-label-0"
+          ]
+        },
+        {
+          "all": [
+            {
+              "id": "important-letter-spacing",
+              "impact": "serious",
+              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum",
+              "relatedNodes": []
+            },
+            {
+              "id": "important-word-spacing",
+              "impact": "serious",
+              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum",
+              "relatedNodes": []
+            },
+            {
+              "id": "important-line-height",
+              "impact": "serious",
+              "message": "line-height in the style attribute is not set to !important, or meets the minimum",
+              "relatedNodes": []
+            }
+          ],
+          "any": [],
+          "html": "\u003cdiv class\u003d\"mat-mdc-notch-piece mdc-notched-outline__notch\" style\u003d\"width: calc(88px * var(--mat-mdc-form-field-floating-label-scale, 0.75) + 9px);\"\u003e",
+          "none": [],
+          "target": [
+            "mat-form-field:nth-child(2) \u003e .mat-mdc-text-field-wrapper.mdc-text-field.mdc-text-field--outlined \u003e .mat-mdc-form-field-flex \u003e .mdc-notched-outline.mdc-notched-outline--upgraded.mdc-notched-outline--notched \u003e .mdc-notched-outline__notch.mat-mdc-notch-piece"
+          ]
+        },
+        {
+          "all": [
+            {
+              "id": "important-letter-spacing",
+              "impact": "serious",
+              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum",
+              "relatedNodes": []
+            },
+            {
+              "id": "important-word-spacing",
+              "impact": "serious",
+              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum",
+              "relatedNodes": []
+            },
+            {
+              "id": "important-line-height",
+              "impact": "serious",
+              "message": "line-height in the style attribute is not set to !important, or meets the minimum",
+              "relatedNodes": []
+            }
+          ],
+          "any": [],
+          "html": "\u003clabel matformfieldfloatinglabel\u003d\"\" class\u003d\"mdc-floating-label mat-mdc-floating-label mdc-floating-label--float-above\" id\u003d\"mat-mdc-form-field-label-1\" for\u003d\"mat-input-1\" style\u003d\"\"\u003e",
+          "none": [],
+          "target": [
+            "#mat-mdc-form-field-label-1"
+          ]
+        }
+      ],
+      "tags": [
+        "cat.structure",
+        "wcag21aa",
+        "wcag1412",
+        "EN-301-549",
+        "EN-9.1.4.12",
+        "ACT"
+      ]
+    },
+    {
+      "description": "Ensure buttons have discernible text",
+      "help": "Buttons must have discernible text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/button-name?application\u003daxeAPI",
+      "id": "button-name",
+      "impact": "critical",
+      "nodes": [
+        {
+          "all": [],
+          "any": [
+            {
+              "id": "button-has-visible-text",
+              "impact": "critical",
+              "message": "Element has inner text that is visible to screen readers",
+              "relatedNodes": []
+            }
+          ],
+          "html": "\u003cbutton mat-flat-button\u003d\"\" class\u003d\"mdc-button mat-mdc-button-base mt-3 mdc-button--unelevated mat-mdc-unelevated-button mat-unthemed\" mat-ripple-loader-uninitialized\u003d\"\" mat-ripple-loader-class-name\u003d\"mat-mdc-button-ripple\"\u003e",
+          "none": [],
+          "target": [
+            ".mdc-button"
+          ]
+        }
+      ],
+      "tags": [
+        "cat.name-role-value",
+        "wcag2a",
+        "wcag412",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-11.9.1"
+      ]
+    },
+    {
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application\u003daxeAPI",
+      "id": "color-contrast",
+      "impact": "serious",
+      "nodes": [
+        {
+          "all": [],
+          "any": [
+            {
+              "data": {
+                "bgColor": "#ecedf7",
+                "contrastRatio": 14.74,
+                "expectedContrastRatio": "3:1",
+                "fgColor": "#191b23",
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "normal"
+              },
+              "id": "color-contrast",
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 14.74",
+              "relatedNodes": []
+            }
+          ],
+          "html": "\u003ch1 class\u003d\"text-2xl mb-2 text-on-surface\"\u003eLogin\u003c/h1\u003e",
+          "none": [],
+          "target": [
+            "h1"
+          ]
+        },
+        {
+          "all": [],
+          "any": [
+            {
+              "data": {
+                "bgColor": "#ecedf7",
+                "contrastRatio": 14.74,
+                "expectedContrastRatio": "4.5:1",
+                "fgColor": "#191b23",
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal"
+              },
+              "id": "color-contrast",
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 14.74",
+              "relatedNodes": []
+            }
+          ],
+          "html": "\u003cspan\u003eDon\u0027t have an account?\u003c/span\u003e",
+          "none": [],
+          "target": [
+            ".gap-1 \u003e span"
+          ]
+        },
+        {
+          "all": [],
+          "any": [
+            {
+              "data": {
+                "bgColor": "#ecedf7",
+                "contrastRatio": 5.56,
+                "expectedContrastRatio": "4.5:1",
+                "fgColor": "#005ac2",
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal"
+              },
+              "id": "color-contrast",
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.56",
+              "relatedNodes": []
+            }
+          ],
+          "html": "\u003ca class\u003d\"text-primary cursor-pointer\"\u003eSign up!\u003c/a\u003e",
+          "none": [],
+          "target": [
+            "a"
+          ]
+        },
+        {
+          "all": [],
+          "any": [
+            {
+              "data": {
+                "bgColor": "#ecedf7",
+                "contrastRatio": 7.97,
+                "expectedContrastRatio": "4.5:1",
+                "fgColor": "#424754",
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal"
+              },
+              "id": "color-contrast",
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 7.97",
+              "relatedNodes": []
+            }
+          ],
+          "html": "\u003cmat-label\u003eEmail\u003c/mat-label\u003e",
+          "none": [],
+          "target": [
+            "#mat-mdc-form-field-label-0 \u003e mat-label"
+          ]
+        },
+        {
+          "all": [],
+          "any": [
+            {
+              "data": {
+                "bgColor": "#ecedf7",
+                "contrastRatio": 7.97,
+                "expectedContrastRatio": "4.5:1",
+                "fgColor": "#424754",
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal"
+              },
+              "id": "color-contrast",
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 7.97",
+              "relatedNodes": []
+            }
+          ],
+          "html": "\u003cmat-label\u003ePassword\u003c/mat-label\u003e",
+          "none": [],
+          "target": [
+            "#mat-mdc-form-field-label-1 \u003e mat-label"
+          ]
+        },
+        {
+          "all": [],
+          "any": [
+            {
+              "data": {
+                "bgColor": "#005ac2",
+                "contrastRatio": 6.47,
+                "expectedContrastRatio": "4.5:1",
+                "fgColor": "#ffffff",
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal"
+              },
+              "id": "color-contrast",
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 6.47",
+              "relatedNodes": []
+            }
+          ],
+          "html": "\u003cspan\u003eLogin\u003c/span\u003e",
+          "none": [],
+          "target": [
+            "app-loading-container \u003e span"
+          ]
+        },
+        {
+          "all": [],
+          "any": [
+            {
+              "data": {
+                "bgColor": "#d8e2ff",
+                "contrastRatio": 13.24,
+                "expectedContrastRatio": "4.5:1",
+                "fgColor": "#001a42",
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal"
+              },
+              "id": "color-contrast",
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 13.24",
+              "relatedNodes": []
+            }
+          ],
+          "html": "\u003cp\u003eTwo login accounts are available:\u003c/p\u003e",
+          "none": [],
+          "target": [
+            "p:nth-child(1)"
+          ]
+        },
+        {
+          "all": [],
+          "any": [
+            {
+              "data": {
+                "bgColor": "#d8e2ff",
+                "contrastRatio": 13.24,
+                "expectedContrastRatio": "4.5:1",
+                "fgColor": "#001a42",
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal"
+              },
+              "id": "color-contrast",
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 13.24",
+              "relatedNodes": []
+            }
+          ],
+          "html": "\u003cli\u003ezoaib@zoaibkhan.com\u003c/li\u003e",
+          "none": [],
+          "target": [
+            "li:nth-child(1)"
+          ]
+        },
+        {
+          "all": [],
+          "any": [
+            {
+              "data": {
+                "bgColor": "#d8e2ff",
+                "contrastRatio": 13.24,
+                "expectedContrastRatio": "4.5:1",
+                "fgColor": "#001a42",
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal"
+              },
+              "id": "color-contrast",
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 13.24",
+              "relatedNodes": []
+            }
+          ],
+          "html": "\u003cli\u003ejohndoe@zoaibkhan.com\u003c/li\u003e",
+          "none": [],
+          "target": [
+            "li:nth-child(2)"
+          ]
+        },
+        {
+          "all": [],
+          "any": [
+            {
+              "data": {
+                "bgColor": "#d8e2ff",
+                "contrastRatio": 13.24,
+                "expectedContrastRatio": "4.5:1",
+                "fgColor": "#001a42",
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal"
+              },
+              "id": "color-contrast",
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 13.24",
+              "relatedNodes": []
+            }
+          ],
+          "html": "\u003cp\u003ePassword: testing123\u003c/p\u003e",
+          "none": [],
+          "target": [
+            "p:nth-child(3)"
+          ]
+        }
+      ],
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ]
+    },
+    {
+      "description": "Ensure each HTML document contains a non-empty \u003ctitle\u003e element",
+      "help": "Documents must have \u003ctitle\u003e element to aid in navigation",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/document-title?application\u003daxeAPI",
+      "id": "document-title",
+      "nodes": [
+        {
+          "all": [],
+          "any": [
+            {
+              "id": "doc-has-title",
+              "impact": "serious",
+              "message": "Document has a non-empty \u003ctitle\u003e element",
+              "relatedNodes": []
+            }
+          ],
+          "html": "\u003chtml lang\u003d\"en\" data-beasties-container\u003d\"\"\u003e",
+          "none": [],
+          "target": [
+            "html"
+          ]
+        }
+      ],
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag242",
+        "TTv5",
+        "TT12.a",
+        "EN-301-549",
+        "EN-9.2.4.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-8.5.1"
+      ]
+    },
+    {
+      "description": "Ensure every id attribute value used in ARIA and in labels is unique",
+      "help": "IDs used in ARIA and labels must be unique",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/duplicate-id-aria?application\u003daxeAPI",
+      "id": "duplicate-id-aria",
+      "nodes": [
+        {
+          "all": [],
+          "any": [
+            {
+              "data": "mat-input-0",
+              "id": "duplicate-id-aria",
+              "impact": "critical",
+              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute",
+              "relatedNodes": []
+            }
+          ],
+          "html": "\u003cinput matinput\u003d\"\" type\u003d\"email\" placeholder\u003d\"Enter your email\" name\u003d\"email\" required\u003d\"\" class\u003d\"mat-mdc-input-elemen...\" id\u003d\"mat-input-0\" aria-required\u003d\"true\" aria-invalid\u003d\"false\"\u003e",
+          "none": [],
+          "target": [
+            "#mat-input-0"
+          ]
+        },
+        {
+          "all": [],
+          "any": [
+            {
+              "data": "mat-input-1",
+              "id": "duplicate-id-aria",
+              "impact": "critical",
+              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute",
+              "relatedNodes": []
+            }
+          ],
+          "html": "\u003cinput matinput\u003d\"\" placeholder\u003d\"Enter your password\" name\u003d\"password\" required\u003d\"\" class\u003d\"mat-mdc-input-elemen...\" type\u003d\"password\" id\u003d\"mat-input-1\" aria-required\u003d\"true\" aria-invalid\u003d\"false\"\u003e",
+          "none": [],
+          "target": [
+            "#mat-input-1"
+          ]
+        }
+      ],
+      "tags": [
+        "cat.parsing",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-8.2.1"
+      ]
+    },
+    {
+      "description": "Ensure form field does not have multiple label elements",
+      "help": "Form field must not have multiple label elements",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/form-field-multiple-labels?application\u003daxeAPI",
+      "id": "form-field-multiple-labels",
+      "nodes": [
+        {
+          "all": [],
+          "any": [],
+          "html": "\u003cinput matinput\u003d\"\" type\u003d\"email\" placeholder\u003d\"Enter your email\" name\u003d\"email\" required\u003d\"\" class\u003d\"mat-mdc-input-elemen...\" id\u003d\"mat-input-0\" aria-required\u003d\"true\" aria-invalid\u003d\"false\"\u003e",
+          "none": [
+            {
+              "id": "multiple-label",
+              "impact": "moderate",
+              "message": "Form field does not have multiple label elements",
+              "relatedNodes": [
+                {
+                  "html": "\u003clabel matformfieldfloatinglabel\u003d\"\" class\u003d\"mdc-floating-label mat-mdc-floating-label mdc-floating-label--float-above\" id\u003d\"mat-mdc-form-field-label-0\" for\u003d\"mat-input-0\" style\u003d\"\"\u003e",
+                  "target": [
+                    "#mat-mdc-form-field-label-0"
+                  ]
+                }
+              ]
+            }
+          ],
+          "target": [
+            "#mat-input-0"
+          ]
+        },
+        {
+          "all": [],
+          "any": [],
+          "html": "\u003cinput matinput\u003d\"\" placeholder\u003d\"Enter your password\" name\u003d\"password\" required\u003d\"\" class\u003d\"mat-mdc-input-elemen...\" type\u003d\"password\" id\u003d\"mat-input-1\" aria-required\u003d\"true\" aria-invalid\u003d\"false\"\u003e",
+          "none": [
+            {
+              "id": "multiple-label",
+              "impact": "moderate",
+              "message": "Form field does not have multiple label elements",
+              "relatedNodes": [
+                {
+                  "html": "\u003clabel matformfieldfloatinglabel\u003d\"\" class\u003d\"mdc-floating-label mat-mdc-floating-label mdc-floating-label--float-above\" id\u003d\"mat-mdc-form-field-label-1\" for\u003d\"mat-input-1\" style\u003d\"\"\u003e",
+                  "target": [
+                    "#mat-mdc-form-field-label-1"
+                  ]
+                }
+              ]
+            }
+          ],
+          "target": [
+            "#mat-input-1"
+          ]
+        }
+      ],
+      "tags": [
+        "cat.forms",
+        "wcag2a",
+        "wcag332",
+        "TTv5",
+        "TT5.c",
+        "EN-301-549",
+        "EN-9.3.3.2",
+        "RGAAv4",
+        "RGAA-11.2.1"
+      ]
+    },
+    {
+      "description": "Ensure every HTML document has a lang attribute",
+      "help": "\u003chtml\u003e element must have a lang attribute",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/html-has-lang?application\u003daxeAPI",
+      "id": "html-has-lang",
+      "nodes": [
+        {
+          "all": [],
+          "any": [
+            {
+              "id": "has-lang",
+              "impact": "serious",
+              "message": "The \u003chtml\u003e element has a lang attribute",
+              "relatedNodes": []
+            }
+          ],
+          "html": "\u003chtml lang\u003d\"en\" data-beasties-container\u003d\"\"\u003e",
+          "none": [],
+          "target": [
+            "html"
+          ]
+        }
+      ],
+      "tags": [
+        "cat.language",
+        "wcag2a",
+        "wcag311",
+        "TTv5",
+        "TT11.a",
+        "EN-301-549",
+        "EN-9.3.1.1",
+        "ACT",
+        "RGAAv4",
+        "RGAA-8.3.1"
+      ]
+    },
+    {
+      "description": "Ensure the lang attribute of the \u003chtml\u003e element has a valid value",
+      "help": "\u003chtml\u003e element must have a valid value for the lang attribute",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/html-lang-valid?application\u003daxeAPI",
+      "id": "html-lang-valid",
+      "nodes": [
+        {
+          "all": [],
+          "any": [],
+          "html": "\u003chtml lang\u003d\"en\" data-beasties-container\u003d\"\"\u003e",
+          "none": [
+            {
+              "id": "valid-lang",
+              "impact": "serious",
+              "message": "Value of lang attribute is included in the list of valid languages",
+              "relatedNodes": []
+            }
+          ],
+          "target": [
+            "html"
+          ]
+        }
+      ],
+      "tags": [
+        "cat.language",
+        "wcag2a",
+        "wcag311",
+        "TTv5",
+        "TT11.a",
+        "EN-301-549",
+        "EN-9.3.1.1",
+        "ACT",
+        "RGAAv4",
+        "RGAA-8.4.1"
+      ]
+    },
+    {
+      "description": "Ensure every form element has a label",
+      "help": "Form elements must have labels",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/label?application\u003daxeAPI",
+      "id": "label",
+      "nodes": [
+        {
+          "all": [],
+          "any": [
+            {
+              "data": {
+                "explicitLabel": "Email"
+              },
+              "id": "explicit-label",
+              "impact": "critical",
+              "message": "Element has an explicit \u003clabel\u003e",
+              "relatedNodes": [
+                {
+                  "html": "\u003clabel matformfieldfloatinglabel\u003d\"\" class\u003d\"mdc-floating-label mat-mdc-floating-label mdc-floating-label--float-above\" id\u003d\"mat-mdc-form-field-label-0\" for\u003d\"mat-input-0\" style\u003d\"\"\u003e",
+                  "target": [
+                    "#mat-mdc-form-field-label-0"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "non-empty-placeholder",
+              "impact": "critical",
+              "message": "Element has a placeholder attribute",
+              "relatedNodes": []
+            }
+          ],
+          "html": "\u003cinput matinput\u003d\"\" type\u003d\"email\" placeholder\u003d\"Enter your email\" name\u003d\"email\" required\u003d\"\" class\u003d\"mat-mdc-input-elemen...\" id\u003d\"mat-input-0\" aria-required\u003d\"true\" aria-invalid\u003d\"false\"\u003e",
+          "none": [
+            {
+              "id": "hidden-explicit-label",
+              "impact": "critical",
+              "message": "Form element has a visible explicit \u003clabel\u003e",
+              "relatedNodes": []
+            }
+          ],
+          "target": [
+            "#mat-input-0"
+          ]
+        },
+        {
+          "all": [],
+          "any": [
+            {
+              "data": {
+                "explicitLabel": "Password"
+              },
+              "id": "explicit-label",
+              "impact": "critical",
+              "message": "Element has an explicit \u003clabel\u003e",
+              "relatedNodes": [
+                {
+                  "html": "\u003clabel matformfieldfloatinglabel\u003d\"\" class\u003d\"mdc-floating-label mat-mdc-floating-label mdc-floating-label--float-above\" id\u003d\"mat-mdc-form-field-label-1\" for\u003d\"mat-input-1\" style\u003d\"\"\u003e",
+                  "target": [
+                    "#mat-mdc-form-field-label-1"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "non-empty-placeholder",
+              "impact": "critical",
+              "message": "Element has a placeholder attribute",
+              "relatedNodes": []
+            }
+          ],
+          "html": "\u003cinput matinput\u003d\"\" placeholder\u003d\"Enter your password\" name\u003d\"password\" required\u003d\"\" class\u003d\"mat-mdc-input-elemen...\" type\u003d\"password\" id\u003d\"mat-input-1\" aria-required\u003d\"true\" aria-invalid\u003d\"false\"\u003e",
+          "none": [
+            {
+              "id": "hidden-explicit-label",
+              "impact": "critical",
+              "message": "Form element has a visible explicit \u003clabel\u003e",
+              "relatedNodes": []
+            }
+          ],
+          "target": [
+            "#mat-input-1"
+          ]
+        }
+      ],
+      "tags": [
+        "cat.forms",
+        "wcag2a",
+        "wcag412",
+        "section508",
+        "section508.22.n",
+        "TTv5",
+        "TT5.c",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-11.1.1"
+      ]
+    },
+    {
+      "description": "Ensure that lists are structured correctly",
+      "help": "\u003cul\u003e and \u003col\u003e must only directly contain \u003cli\u003e, \u003cscript\u003e or \u003ctemplate\u003e elements",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/list?application\u003daxeAPI",
+      "id": "list",
+      "nodes": [
+        {
+          "all": [],
+          "any": [],
+          "html": "\u003cul class\u003d\"list-disc ml-4 mt-2 mb-2\"\u003e\u003cli\u003ezoaib@zoaibkhan.com\u003c/li\u003e\u003cli\u003ejohndoe@zoaibkhan.com\u003c/li\u003e\u003c/ul\u003e",
+          "none": [
+            {
+              "id": "only-listitems",
+              "impact": "serious",
+              "message": "List element only has direct children that are allowed inside \u003cli\u003e elements",
+              "relatedNodes": []
+            }
+          ],
+          "target": [
+            "ul"
+          ]
+        }
+      ],
+      "tags": [
+        "cat.structure",
+        "wcag2a",
+        "wcag131",
+        "EN-301-549",
+        "EN-9.1.3.1",
+        "RGAAv4",
+        "RGAA-9.3.1"
+      ]
+    },
+    {
+      "description": "Ensure \u003cli\u003e elements are used semantically",
+      "help": "\u003cli\u003e elements must be contained in a \u003cul\u003e or \u003col\u003e",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/listitem?application\u003daxeAPI",
+      "id": "listitem",
+      "nodes": [
+        {
+          "all": [],
+          "any": [
+            {
+              "id": "listitem",
+              "impact": "serious",
+              "message": "List item has a \u003cul\u003e, \u003col\u003e or role\u003d\"list\" parent element",
+              "relatedNodes": []
+            }
+          ],
+          "html": "\u003cli\u003ezoaib@zoaibkhan.com\u003c/li\u003e",
+          "none": [],
+          "target": [
+            "li:nth-child(1)"
+          ]
+        },
+        {
+          "all": [],
+          "any": [
+            {
+              "id": "listitem",
+              "impact": "serious",
+              "message": "List item has a \u003cul\u003e, \u003col\u003e or role\u003d\"list\" parent element",
+              "relatedNodes": []
+            }
+          ],
+          "html": "\u003cli\u003ejohndoe@zoaibkhan.com\u003c/li\u003e",
+          "none": [],
+          "target": [
+            "li:nth-child(2)"
+          ]
+        }
+      ],
+      "tags": [
+        "cat.structure",
+        "wcag2a",
+        "wcag131",
+        "EN-301-549",
+        "EN-9.1.3.1",
+        "RGAAv4",
+        "RGAA-9.3.1"
+      ]
+    },
+    {
+      "description": "Ensure \u003cmeta name\u003d\"viewport\"\u003e does not disable text scaling and zooming",
+      "help": "Zooming and scaling must not be disabled",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/meta-viewport?application\u003daxeAPI",
+      "id": "meta-viewport",
+      "nodes": [
+        {
+          "all": [],
+          "any": [
+            {
+              "id": "meta-viewport",
+              "impact": "moderate",
+              "message": "\u003cmeta\u003e tag does not disable zooming on mobile devices",
+              "relatedNodes": []
+            }
+          ],
+          "html": "\u003cmeta name\u003d\"viewport\" content\u003d\"width\u003ddevice-width, initial-scale\u003d1\"\u003e",
+          "none": [],
+          "target": [
+            "meta[name\u003d\"viewport\"]"
+          ]
+        }
+      ],
+      "tags": [
+        "cat.sensory-and-visual-cues",
+        "wcag2aa",
+        "wcag144",
+        "EN-301-549",
+        "EN-9.1.4.4",
+        "ACT",
+        "RGAAv4",
+        "RGAA-10.4.2"
+      ]
+    },
+    {
+      "description": "Ensure interactive controls are not nested as they are not always announced by screen readers or can cause focus problems for assistive technologies",
+      "help": "Interactive controls must not be nested",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/nested-interactive?application\u003daxeAPI",
+      "id": "nested-interactive",
+      "nodes": [
+        {
+          "all": [],
+          "any": [
+            {
+              "id": "no-focusable-content",
+              "impact": "serious",
+              "message": "Element does not have focusable descendants",
+              "relatedNodes": []
+            }
+          ],
+          "html": "\u003cbutton mat-icon-button\u003d\"\" matsuffix\u003d\"\" type\u003d\"button\" class\u003d\"mdc-icon-button mat-mdc-icon-button mat-mdc-button-base mr-1 mat-unthemed\" mat-ripple-loader-uninitialized\u003d\"\" mat-ripple-loader-class-name\u003d\"mat-mdc-button-ripple\" mat-ripple-loader-centered\u003d\"\"\u003e",
+          "none": [],
+          "target": [
+            ".mdc-icon-button"
+          ]
+        },
+        {
+          "all": [],
+          "any": [
+            {
+              "id": "no-focusable-content",
+              "impact": "serious",
+              "message": "Element does not have focusable descendants",
+              "relatedNodes": []
+            }
+          ],
+          "html": "\u003cbutton mat-flat-button\u003d\"\" class\u003d\"mdc-button mat-mdc-button-base mt-3 mdc-button--unelevated mat-mdc-unelevated-button mat-unthemed\" mat-ripple-loader-uninitialized\u003d\"\" mat-ripple-loader-class-name\u003d\"mat-mdc-button-ripple\"\u003e",
+          "none": [],
+          "target": [
+            ".mdc-button"
+          ]
+        }
+      ],
+      "tags": [
+        "cat.keyboard",
+        "wcag2a",
+        "wcag412",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ]
+    }
+  ],
+  "testEngine": {
+    "name": "axe-core",
+    "version": "4.11.0"
+  },
+  "testEnvironment": {
+    "orientationAngle": 0,
+    "orientationType": "landscape-primary",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0",
+    "windowHeight": 731,
+    "windowWidth": 1536
+  },
+  "testRunner": {
+    "name": "axe"
+  },
+  "timestamp": "2025-12-18T16:09:41.826Z",
+  "toolOptions": {
+    "reporter": "v1",
+    "runOnly": {
+      "type": "tag",
+      "values": [
+        "wcag2a",
+        "wcag2aa",
+        "wcag21a",
+        "wcag21aa"
+      ]
+    }
+  },
+  "url": "https://angular-dashboard-lime.vercel.app/login",
+  "violations": [
+    {
+      "description": "Ensure buttons have discernible text",
+      "help": "Buttons must have discernible text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/button-name?application\u003daxeAPI",
+      "id": "button-name",
+      "impact": "critical",
+      "nodes": [
+        {
+          "all": [],
+          "any": [
+            {
+              "id": "button-has-visible-text",
+              "impact": "critical",
+              "message": "Element does not have inner text that is visible to screen readers",
+              "relatedNodes": []
+            },
+            {
+              "id": "aria-label",
+              "impact": "critical",
+              "message": "aria-label attribute does not exist or is empty",
+              "relatedNodes": []
+            },
+            {
+              "id": "aria-labelledby",
+              "impact": "critical",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty",
+              "relatedNodes": []
+            },
+            {
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "id": "non-empty-title",
+              "impact": "critical",
+              "message": "Element has no title attribute",
+              "relatedNodes": []
+            },
+            {
+              "id": "implicit-label",
+              "impact": "critical",
+              "message": "Element does not have an implicit (wrapped) \u003clabel\u003e",
+              "relatedNodes": []
+            },
+            {
+              "id": "explicit-label",
+              "impact": "critical",
+              "message": "Element does not have an explicit \u003clabel\u003e",
+              "relatedNodes": []
+            },
+            {
+              "id": "presentational-role",
+              "impact": "critical",
+              "message": "Element\u0027s default semantics were not overridden with role\u003d\"none\" or role\u003d\"presentation\"",
+              "relatedNodes": []
+            }
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) \u003clabel\u003e\n  Element does not have an explicit \u003clabel\u003e\n  Element\u0027s default semantics were not overridden with role\u003d\"none\" or role\u003d\"presentation\"",
+          "html": "\u003cbutton mat-icon-button\u003d\"\" matsuffix\u003d\"\" type\u003d\"button\" class\u003d\"mdc-icon-button mat-mdc-icon-button mat-mdc-button-base mr-1 mat-unthemed\" mat-ripple-loader-uninitialized\u003d\"\" mat-ripple-loader-class-name\u003d\"mat-mdc-button-ripple\" mat-ripple-loader-centered\u003d\"\"\u003e",
+          "impact": "critical",
+          "none": [],
+          "target": [
+            ".mdc-icon-button"
+          ]
+        }
+      ],
+      "tags": [
+        "cat.name-role-value",
+        "wcag2a",
+        "wcag412",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-11.9.1"
+      ]
+    }
+  ]
+}
