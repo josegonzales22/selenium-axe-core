@@ -2,8 +2,8 @@ package com.threebrowsers.selenium.drivers;
 
 import com.threebrowsers.selenium.utils.ConfigReader;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.MutableCapabilities;
 
 import java.net.URL;
 import java.net.MalformedURLException;
@@ -16,28 +16,52 @@ public class RemoteDriverManager extends BaseDriver {
     public WebDriver createDriver() {
         ConfigReader config = new ConfigReader("src/main/resources/remote.properties");
 
-        String remoteUrl = config.get("remote.url"); // obligatorio
+        String remoteUrl = config.get("remote.url");
         String browser = config.getOrDefault("browser", "chrome");
-        String user = config.getOrDefault("remote.user", "");
-        String key = config.getOrDefault("remote.key", "");
 
-        DesiredCapabilities caps = new DesiredCapabilities();
-        caps.setBrowserName(browser);
+        MutableCapabilities caps = new MutableCapabilities();
+        caps.setCapability("browserName", browser);
 
         try {
-            if (!user.isEmpty() && !key.isEmpty()) {
-                Map<String, Object> serviceOptions = new HashMap<>();
-                serviceOptions.put("userName", user);
-                serviceOptions.put("accessKey", key);
-                serviceOptions.put("projectName", config.getOrDefault("project.name", "Selenium Tests"));
-                serviceOptions.put("os", config.getOrDefault("os", "ANY"));
-                serviceOptions.put("osVersion", config.getOrDefault("os.version", ""));
-                caps.setCapability("bstack:options", serviceOptions);
+            // 🔹 LambdaTest
+            if (remoteUrl.contains("lambdatest")) {
+
+                caps.setCapability("browserVersion",
+                        config.getOrDefault("browser.version", "latest"));
+                caps.setCapability("platformName",
+                        config.getOrDefault("platform.name", "macOS Ventura"));
+
+                Map<String, Object> ltOptions = new HashMap<>();
+                ltOptions.put("user", config.get("remote.user"));
+                ltOptions.put("accessKey", config.get("remote.key"));
+                ltOptions.put("project", config.getOrDefault("project.name", "LambdaTest Project"));
+                ltOptions.put("build", config.getOrDefault("build.name", "Build 1"));
+                ltOptions.put("name", config.getOrDefault("test.name", "Test"));
+                ltOptions.put("video", true);
+                ltOptions.put("console", true);
+                ltOptions.put("network", true);
+
+                caps.setCapability("LT:Options", ltOptions);
+
+            }
+            // 🔹 BrowserStack (tu soporte actual)
+            else if (remoteUrl.contains("browserstack")) {
+
+                Map<String, Object> bsOptions = new HashMap<>();
+                bsOptions.put("userName", config.get("remote.user"));
+                bsOptions.put("accessKey", config.get("remote.key"));
+                bsOptions.put("projectName", config.getOrDefault("project.name", "BrowserStack Demo"));
+                bsOptions.put("os", config.getOrDefault("os", "OS X"));
+                bsOptions.put("osVersion", config.getOrDefault("os.version", "Sonoma"));
+
+                caps.setCapability("bstack:options", bsOptions);
+
             } else {
                 System.out.println("[INFO] Ejecutando en Grid local o VM: " + remoteUrl);
             }
 
             driver = new RemoteWebDriver(new URL(remoteUrl), caps);
+
         } catch (MalformedURLException e) {
             throw new RuntimeException("URL remota inválida: " + remoteUrl, e);
         }
