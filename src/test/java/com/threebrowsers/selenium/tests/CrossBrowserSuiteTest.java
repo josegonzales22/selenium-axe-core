@@ -1,100 +1,61 @@
 package com.threebrowsers.selenium.tests;
 
-import java.io.File;
-import com.threebrowsers.selenium.drivers.*;
-import static org.junit.jupiter.api.Assumptions.assumeTrue;
+import annotations.Smoke;
+import com.threebrowsers.selenium.drivers.BaseDriver;
+import com.threebrowsers.selenium.drivers.LocalDriverManager;
+import com.threebrowsers.selenium.drivers.LocalDriverManagerMac;
+import com.threebrowsers.selenium.drivers.RemoteDriverManager;
 import com.threebrowsers.selenium.steps.StepsFlow;
-import com.threebrowsers.selenium.utils.ConfigReader;
-import com.threebrowsers.selenium.utils.FileUtil;
-import com.threebrowsers.selenium.reports.ExtentReportManager;
 import org.junit.jupiter.api.*;
-import org.openqa.selenium.WebDriver;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.junit.jupiter.api.TestInfo;
+import org.junit.jupiter.api.condition.EnabledOnOs;
+import org.junit.jupiter.api.condition.OS;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class CrossBrowserSuiteTest extends BaseTest {
-
-    private static ConfigReader localConfig;
-    private static ConfigReader remoteConfig;
-    private WebDriver driver;
     private String currentBrowser;
-
-    @BeforeAll
-    static void loadConfigs() {
-        System.out.println("[INFO] Eliminando carpetas reports e images...");
-
-        FileUtil.deleteFolder(new File("reports"));
-        FileUtil.deleteFolder(new File("images"));
-
-        localConfig = new ConfigReader("src/main/resources/local.properties");
-        remoteConfig = new ConfigReader("src/main/resources/remote.properties");
-        extent = ExtentReportManager.createInstance("CrossBrowserSuite");
-        System.out.println("[INFO] Carpetas eliminadas y entorno iniciado.");
-    }
-
-    @BeforeEach
-    void setupTest(TestInfo testInfo) {
-        test = extent.createTest(testInfo.getDisplayName());
-        System.out.println("[INFO] Iniciando test: " + testInfo.getDisplayName());
-    }
-
-    @AfterEach
-    void cleanup() {
-        if (driver != null) {
-            driver.quit();
-            System.out.println("[INFO] Navegador cerrado: " + currentBrowser);
-        }
-    }
-
-    @AfterAll
-    static void tearDown() {
-        ExtentReportManager.closeReport();
-    }
 
     @Test
     @Order(1)
     @DisplayName("Chrome local")
+    @Smoke
     void testInChrome() throws InterruptedException {
         runLocalTest("chrome");
     }
-    
-    /**/
+
     @Test
     @Order(2)
     @DisplayName("Edge local")
+    @Smoke
     void testInEdge() throws InterruptedException {
         runLocalTest("edge");
     }
-    /**/
 
-    /**/
     @Test
     @Order(3)
     @DisplayName("Firefox local")
+    @Smoke
     void testInFirefox() throws InterruptedException {
         runLocalTest("firefox");
     }
-    /**/
 
-    /*/
     @Test
     @Order(4)
+    @EnabledOnOs(OS.MAC)
     @DisplayName("Safari local")
+    @Smoke
     void testInSafari() throws InterruptedException {
         runLocalTest("safari");
     }
-    /**/
 
-    /**/
+
     @Test
-    @Order(4)
-    @DisplayName("Safari remoto")
-    void testInSafariVM() throws InterruptedException {
+    @Order(5)
+    @DisplayName("Safari cloud")
+    @Disabled()
+    @Smoke
+    void testInSafariCloud() throws InterruptedException {
         runRemoteTest();
     }
-    /**/
-    
 
     private void runLocalTest(String browser) throws InterruptedException {
         currentBrowser = browser;
@@ -136,7 +97,7 @@ public class CrossBrowserSuiteTest extends BaseTest {
 
             steps.executeFlow(baseUrl);
         } catch (Exception e) {
-            test.fail("[ERROR] Error en Safari remoto: " + e.getMessage());
+            test.fail("[ERROR] Error en Safari remoto : " + e.getMessage());
             throw e;
         }
     }

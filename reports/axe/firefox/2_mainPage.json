@@ -4186,7 +4186,7 @@
           "html": "\u003ccanvas style\u003d\"display: block; box-sizing: border-box; height: 160px; width: 407px;\" height\u003d\"200\" width\u003d\"509\" class\u003d\"ng-star-inserted\"\u003e\u003c/canvas\u003e",
           "none": [],
           "target": [
-            "app-loading-container \u003e canvas"
+            ".ng-star-inserted"
           ]
         },
         {
@@ -5139,19 +5139,19 @@
                 {
                   "html": "\u003ch4 _ngcontent-ng-c3796148537\u003d\"\" class\u003d\"text-sm\"\u003eBuilding a Recursive Angular Sidebar Component\u003c/h4\u003e",
                   "target": [
-                    ".gap-6.ng-star-inserted.mb-3:nth-child(1) \u003e div[_ngcontent-ng-c3796148537\u003d\"\"]:nth-child(2) \u003e h4"
+                    ".gap-6.mb-3[_ngcontent-ng-c3796148537\u003d\"\"]:nth-child(1) \u003e div[_ngcontent-ng-c3796148537\u003d\"\"]:nth-child(2) \u003e h4"
                   ]
                 },
                 {
                   "html": "\u003ch4 _ngcontent-ng-c3796148537\u003d\"\" class\u003d\"text-sm\"\u003eMastering Angular Component Communication!\u003c/h4\u003e",
                   "target": [
-                    ".gap-6.ng-star-inserted.mb-3:nth-child(2) \u003e div[_ngcontent-ng-c3796148537\u003d\"\"]:nth-child(2) \u003e h4"
+                    ".gap-6.mb-3[_ngcontent-ng-c3796148537\u003d\"\"]:nth-child(2) \u003e div[_ngcontent-ng-c3796148537\u003d\"\"]:nth-child(2) \u003e h4"
                   ]
                 },
                 {
                   "html": "\u003ch4 _ngcontent-ng-c3796148537\u003d\"\" class\u003d\"text-sm\"\u003eHow to make your Angular apps responsive with CDK Layout and CSS?\u003c/h4\u003e",
                   "target": [
-                    ".gap-6.ng-star-inserted.mb-3:nth-child(3) \u003e div[_ngcontent-ng-c3796148537\u003d\"\"]:nth-child(2) \u003e h4"
+                    ".gap-6.mb-3[_ngcontent-ng-c3796148537\u003d\"\"]:nth-child(3) \u003e div[_ngcontent-ng-c3796148537\u003d\"\"]:nth-child(2) \u003e h4"
                   ]
                 },
                 {
@@ -5823,7 +5823,7 @@
           "html": "\u003ch4 _ngcontent-ng-c3796148537\u003d\"\" class\u003d\"text-sm\"\u003eBuilding a Recursive Angular Sidebar Component\u003c/h4\u003e",
           "none": [],
           "target": [
-            ".gap-6.ng-star-inserted.mb-3:nth-child(1) \u003e div[_ngcontent-ng-c3796148537\u003d\"\"]:nth-child(2) \u003e h4"
+            ".gap-6.mb-3[_ngcontent-ng-c3796148537\u003d\"\"]:nth-child(1) \u003e div[_ngcontent-ng-c3796148537\u003d\"\"]:nth-child(2) \u003e h4"
           ]
         },
         {
@@ -5847,7 +5847,7 @@
           "html": "\u003cp _ngcontent-ng-c3796148537\u003d\"\" class\u003d\"text-xs text-slate-600 dark:text-slate-300\"\u003e Aug 1, 2024 \u003c/p\u003e",
           "none": [],
           "target": [
-            ".gap-6.ng-star-inserted.mb-3:nth-child(1) \u003e div[_ngcontent-ng-c3796148537\u003d\"\"]:nth-child(2) \u003e .text-xs.text-slate-600.dark\\:text-slate-300"
+            ".gap-6.mb-3[_ngcontent-ng-c3796148537\u003d\"\"]:nth-child(1) \u003e div[_ngcontent-ng-c3796148537\u003d\"\"]:nth-child(2) \u003e .text-xs.text-slate-600.dark\\:text-slate-300"
           ]
         },
         {
@@ -5871,7 +5871,7 @@
           "html": "\u003ch4 _ngcontent-ng-c3796148537\u003d\"\" class\u003d\"text-sm\"\u003eMastering Angular Component Communication!\u003c/h4\u003e",
           "none": [],
           "target": [
-            ".gap-6.ng-star-inserted.mb-3:nth-child(2) \u003e div[_ngcontent-ng-c3796148537\u003d\"\"]:nth-child(2) \u003e h4"
+            ".gap-6.mb-3[_ngcontent-ng-c3796148537\u003d\"\"]:nth-child(2) \u003e div[_ngcontent-ng-c3796148537\u003d\"\"]:nth-child(2) \u003e h4"
           ]
         },
         {
@@ -5895,7 +5895,7 @@
           "html": "\u003cp _ngcontent-ng-c3796148537\u003d\"\" class\u003d\"text-xs text-slate-600 dark:text-slate-300\"\u003e Jul 26, 2024 \u003c/p\u003e",
           "none": [],
           "target": [
-            ".gap-6.ng-star-inserted.mb-3:nth-child(2) \u003e div[_ngcontent-ng-c3796148537\u003d\"\"]:nth-child(2) \u003e .text-xs.text-slate-600.dark\\:text-slate-300"
+            ".gap-6.mb-3[_ngcontent-ng-c3796148537\u003d\"\"]:nth-child(2) \u003e div[_ngcontent-ng-c3796148537\u003d\"\"]:nth-child(2) \u003e .text-xs.text-slate-600.dark\\:text-slate-300"
           ]
         },
         {
@@ -5919,7 +5919,7 @@
           "html": "\u003ch4 _ngcontent-ng-c3796148537\u003d\"\" class\u003d\"text-sm\"\u003eHow to make your Angular apps responsive with CDK Layout and CSS?\u003c/h4\u003e",
           "none": [],
           "target": [
-            ".gap-6.ng-star-inserted.mb-3:nth-child(3) \u003e div[_ngcontent-ng-c3796148537\u003d\"\"]:nth-child(2) \u003e h4"
+            ".gap-6.mb-3[_ngcontent-ng-c3796148537\u003d\"\"]:nth-child(3) \u003e div[_ngcontent-ng-c3796148537\u003d\"\"]:nth-child(2) \u003e h4"
           ]
         },
         {
@@ -5943,7 +5943,7 @@
           "html": "\u003cp _ngcontent-ng-c3796148537\u003d\"\" class\u003d\"text-xs text-slate-600 dark:text-slate-300\"\u003e Jun 28, 2024 \u003c/p\u003e",
           "none": [],
           "target": [
-            ".gap-6.ng-star-inserted.mb-3:nth-child(3) \u003e div[_ngcontent-ng-c3796148537\u003d\"\"]:nth-child(2) \u003e .text-xs.text-slate-600.dark\\:text-slate-300"
+            ".gap-6.mb-3[_ngcontent-ng-c3796148537\u003d\"\"]:nth-child(3) \u003e div[_ngcontent-ng-c3796148537\u003d\"\"]:nth-child(2) \u003e .text-xs.text-slate-600.dark\\:text-slate-300"
           ]
         },
         {
@@ -6473,7 +6473,7 @@
           "html": "\u003cimg _ngcontent-ng-c3796148537\u003d\"\" class\u003d\"min-w-[100px] h-[50px] rounded-2xl object-cover\" src\u003d\"https://i.ytimg.com/vi/Irf4aZC3LPY/sddefault.jpg\"\u003e",
           "none": [],
           "target": [
-            ".gap-6.ng-star-inserted.mb-3:nth-child(1) \u003e .cursor-pointer.ng-star-inserted[_ngcontent-ng-c3796148537\u003d\"\"] \u003e .min-w-\\[100px\\].h-\\[50px\\]"
+            ".gap-6.mb-3[_ngcontent-ng-c3796148537\u003d\"\"]:nth-child(1) \u003e .cursor-pointer[_ngcontent-ng-c3796148537\u003d\"\"] \u003e .min-w-\\[100px\\].h-\\[50px\\]"
           ]
         },
         {
@@ -6489,7 +6489,7 @@
           "html": "\u003cimg _ngcontent-ng-c3796148537\u003d\"\" class\u003d\"min-w-[100px] h-[50px] rounded-2xl object-cover\" src\u003d\"https://i.ytimg.com/vi/MtTAfjiZxtk/sddefault.jpg\"\u003e",
           "none": [],
           "target": [
-            ".gap-6.ng-star-inserted.mb-3:nth-child(2) \u003e .cursor-pointer.ng-star-inserted[_ngcontent-ng-c3796148537\u003d\"\"] \u003e .min-w-\\[100px\\].h-\\[50px\\]"
+            ".gap-6.mb-3[_ngcontent-ng-c3796148537\u003d\"\"]:nth-child(2) \u003e .cursor-pointer[_ngcontent-ng-c3796148537\u003d\"\"] \u003e .min-w-\\[100px\\].h-\\[50px\\]"
           ]
         },
         {
@@ -6505,7 +6505,7 @@
           "html": "\u003cimg _ngcontent-ng-c3796148537\u003d\"\" class\u003d\"min-w-[100px] h-[50px] rounded-2xl object-cover\" src\u003d\"https://i.ytimg.com/vi/I13uAoOGU_4/sddefault.jpg\"\u003e",
           "none": [],
           "target": [
-            ".gap-6.ng-star-inserted.mb-3:nth-child(3) \u003e .cursor-pointer.ng-star-inserted[_ngcontent-ng-c3796148537\u003d\"\"] \u003e .min-w-\\[100px\\].h-\\[50px\\]"
+            ".gap-6.mb-3[_ngcontent-ng-c3796148537\u003d\"\"]:nth-child(3) \u003e .cursor-pointer[_ngcontent-ng-c3796148537\u003d\"\"] \u003e .min-w-\\[100px\\].h-\\[50px\\]"
           ]
         },
         {
@@ -6685,7 +6685,7 @@
   "testRunner": {
     "name": "axe"
   },
-  "timestamp": "2025-12-22T04:15:49.474Z",
+  "timestamp": "2025-12-26T20:07:06.291Z",
   "toolOptions": {
     "reporter": "v1",
     "runOnly": {
@@ -7147,7 +7147,7 @@
           "impact": "critical",
           "none": [],
           "target": [
-            ".gap-6.ng-star-inserted.mb-3:nth-child(1) \u003e .cursor-pointer.ng-star-inserted[_ngcontent-ng-c3796148537\u003d\"\"] \u003e .min-w-\\[100px\\].h-\\[50px\\]"
+            ".gap-6.mb-3[_ngcontent-ng-c3796148537\u003d\"\"]:nth-child(1) \u003e .cursor-pointer[_ngcontent-ng-c3796148537\u003d\"\"] \u003e .min-w-\\[100px\\].h-\\[50px\\]"
           ]
         },
         {
@@ -7192,7 +7192,7 @@
           "impact": "critical",
           "none": [],
           "target": [
-            ".gap-6.ng-star-inserted.mb-3:nth-child(2) \u003e .cursor-pointer.ng-star-inserted[_ngcontent-ng-c3796148537\u003d\"\"] \u003e .min-w-\\[100px\\].h-\\[50px\\]"
+            ".gap-6.mb-3[_ngcontent-ng-c3796148537\u003d\"\"]:nth-child(2) \u003e .cursor-pointer[_ngcontent-ng-c3796148537\u003d\"\"] \u003e .min-w-\\[100px\\].h-\\[50px\\]"
           ]
         },
         {
@@ -7237,7 +7237,7 @@
           "impact": "critical",
           "none": [],
           "target": [
-            ".gap-6.ng-star-inserted.mb-3:nth-child(3) \u003e .cursor-pointer.ng-star-inserted[_ngcontent-ng-c3796148537\u003d\"\"] \u003e .min-w-\\[100px\\].h-\\[50px\\]"
+            ".gap-6.mb-3[_ngcontent-ng-c3796148537\u003d\"\"]:nth-child(3) \u003e .cursor-pointer[_ngcontent-ng-c3796148537\u003d\"\"] \u003e .min-w-\\[100px\\].h-\\[50px\\]"
           ]
         }
       ],
