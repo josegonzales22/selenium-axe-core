@@ -1,7 +1,9 @@
 # 🧪 Selenium + Axe-Core Automation Framework
 
-Este proyecto ejecuta **pruebas automatizadas de accesibilidad** utilizando **Selenium WebDriver**, **JUnit 5**, y **axe-core**.  
-Incluye soporte para generación de reportes HTML y compatibilidad con flujos **CI/CD multiplataforma** (Windows, Linux, macOS).
+Este proyecto ejecuta **pruebas automatizadas de accesibilidad** utilizando **Selenium WebDriver**, **JUnit 5**, y *
+*axe-core**.  
+Incluye soporte para generación de reportes HTML y compatibilidad con flujos **CI/CD multiplataforma** (Windows, Linux,
+macOS).
 
 ---
 
@@ -21,6 +23,7 @@ Antes de ejecutar las pruebas, asegúrate de tener instaladas las siguientes her
 Este modo es ideal para desarrollo local o entornos donde quieras verificar manualmente el flujo de pruebas.
 
 ### **1️⃣ Instalar dependencias de Node**
+
 Dentro de la carpeta `nodejs` (donde está `axe-core` y `generate-html.js`):
 
 ```bash
@@ -30,10 +33,13 @@ cd ..
 ```
 
 ### **2️⃣ Ejecutar las pruebas con Maven**
+
 ```bash
 mvn clean test
 ```
+
 Al finalizar, los reportes se generarán en:
+
 ```bash
 reports/axe/<nombre-navegador>/
 ```
@@ -50,6 +56,7 @@ Ejecutar el archivo: run-tests.js
 ```bash
 node run-tests.js
 ```
+
 El script:
 
 - Elimina carpetas previas (reports/axe y artifacts)
@@ -61,3 +68,14 @@ El script:
 - Limpia la carpeta temporal artifacts
 
 - Retorna código de error 1 si algo falla (para CI/CD)
+
+## Licencia
+
+Este proyecto utiliza la [Licencia MIT](https://opensource.org/licenses/MIT).
+
+## Disclaimer
+
+La aplicación web utilizada en los ejemplos de este
+proyecto [angular-dashboard-lime.vercel.app](https://angular-dashboard-lime.vercel.app) pertenece
+a [Zoaib Khan](https://www.youtube.com/@ZoaibKhan). Se utiliza exclusivamente con fines educativos, demostrativos y para
+prácticas de automatización.
