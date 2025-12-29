@@ -2,13 +2,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
                              http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-
-    <groupId>com.threebrowsers.selenium</groupId>
-    <artifactId>selenium-automation</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <name>Selenium Automation Framework</name>
-
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
@@ -23,7 +16,20 @@
         <extentreports.version>5.1.1</extentreports.version>
         <commons.io.version>2.16.1</commons.io.version>
         <aspectj.version>1.9.25.1</aspectj.version>
+
+        <repository-url>github.com/josegonzales22/selenium-axe-core</repository-url>
+        <project-name>Selenium and Axe Core</project-name>
+
+        <maven.build.timestamp.format>yyyy</maven.build.timestamp.format>
+        <current.year>${maven.build.timestamp}</current.year>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.threebrowsers.selenium</groupId>
+    <artifactId>selenium-automation</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>${project-name}</name>
 
     <dependencies>
         <!-- Selenium WebDriver -->
@@ -131,6 +137,57 @@
                     </argLine>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.21.0</version>
+            </plugin>
         </plugins>
     </build>
+    <description>
+        This project runs automated accessibility tests using Selenium WebDriver, JUnit 5, and axe-core. It includes
+        support for generating HTML reports and compatibility with cross-platform CI/CD workflows (Windows, Linux,
+        macOS).
+    </description>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>file:///${project.basedir}/LICENSE</url>
+            <distribution>repo</distribution>
+            <comments>Copyright ${current.year} Jose Fabricio Gonzales Lamas</comments>
+        </license>
+    </licenses>
+
+    <url>https://${repository-url}</url>
+
+    <scm>
+        <connection>scm:git:git:${repository-url}</connection>
+        <developerConnection>scm:git:ssh://${repository-url}</developerConnection>
+        <url>https://${repository-url}</url>
+    </scm>
+
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>3.9.0</version>
+                <configuration>
+                    <dependencyDetailsEnabled>false</dependencyDetailsEnabled>
+                </configuration>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>summary</report>
+                            <report>dependencies</report>
+                            <report>licenses</report>
+                            <report>modules</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
+        </plugins>
+
+    </reporting>
 </project>
