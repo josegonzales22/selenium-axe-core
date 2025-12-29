@@ -86,6 +86,17 @@
             <artifactId>aspectjweaver</artifactId>
             <version>${aspectj.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.23.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.23.1</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -113,8 +124,6 @@
                     </includes>
                     <useSystemClassLoader>true</useSystemClassLoader>
                     <testFailureIgnore>false</testFailureIgnore>
-                    <!-- Forzar JVM UTF-8 en entornos CI/CD -->
-                    <argLine>-Dfile.encoding=UTF-8</argLine>
                     <!-- Carga del agente AspectJ + UTF-8 -->
                     <argLine>
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
@@ -124,39 +133,4 @@
             </plugin>
         </plugins>
     </build>
-    <profiles>
-        <!-- Profile para Windows: excluye Safari -->
-        <profile>
-            <id>windows</id>
-            <activation>
-                <os>
-                    <family>Windows</family>
-                </os>
-            </activation>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-compiler-plugin</artifactId>
-                        <configuration>
-                            <excludes>
-                                <exclude>**/LocalDriverManagerMac.java</exclude>
-                            </excludes>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-
-        <!-- Profile para macOS: incluye Safari -->
-        <profile>
-            <id>mac</id>
-            <activation>
-                <os>
-                    <family>mac</family>
-                </os>
-            </activation>
-        </profile>
-    </profiles>
-
 </project>

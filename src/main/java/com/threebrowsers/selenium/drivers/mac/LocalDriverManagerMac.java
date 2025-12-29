@@ -1,5 +1,7 @@
-package com.threebrowsers.selenium.drivers;
+package com.threebrowsers.selenium.drivers.mac;
 
+import com.threebrowsers.selenium.drivers.LocalDriverManager;
+import com.threebrowsers.selenium.utils.Logs;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.safari.SafariOptions;
@@ -13,12 +15,16 @@ public class LocalDriverManagerMac extends LocalDriverManager {
     @Override
     public WebDriver createDriver() {
         if (!System.getProperty("os.name").toLowerCase().contains("mac")) {
-            throw new IllegalStateException("Este driver solo es válido en macOS.");
+            Logs.warning("SafariDriver solo es válido en macOS.");
+        }
+
+        if (super.headless) {
+            Logs.warning("Safari NO soporta headless. Ignorando parámetro.");
         }
 
         SafariOptions safariOptions = new SafariOptions();
 
-        System.out.println("[INFO] SafariDriver iniciado en macOS.");
+        Logs.info("SafariDriver iniciado en macOS.");
 
         WebDriver driver = new SafariDriver(safariOptions);
 

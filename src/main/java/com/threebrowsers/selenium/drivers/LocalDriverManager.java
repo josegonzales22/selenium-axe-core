@@ -1,7 +1,7 @@
 package com.threebrowsers.selenium.drivers;
 
+import com.threebrowsers.selenium.utils.Logs;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import com.threebrowsers.selenium.drivers.LocalDriverManagerMac;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -16,7 +16,7 @@ import java.net.URL;
 public class LocalDriverManager extends BaseDriver {
 
     private final String browser;
-    private final boolean headless;
+    protected final boolean headless;
 
     public LocalDriverManager(String browser) {
         this(browser, false);
@@ -33,13 +33,13 @@ public class LocalDriverManager extends BaseDriver {
         boolean isMac = os.contains("mac");
         switch (browser) {
             case "chrome" -> {
-                if (isMac){
+                if (isMac) {
                     WebDriverManager.chromedriver()
-                    .setup();
-                }else{
+                            .setup();
+                } else {
                     WebDriverManager.chromedriver()
-                        .browserVersion("latest")
-                        .setup();
+                            .browserVersion("latest")
+                            .setup();
                 }
                 ChromeOptions chromeOptions = new ChromeOptions();
                 java.util.Map<String, Object> prefs = new java.util.HashMap<>();
@@ -53,23 +53,24 @@ public class LocalDriverManager extends BaseDriver {
                     chromeOptions.addArguments("--headless=new");
                     chromeOptions.addArguments("--disable-gpu");
                     chromeOptions.addArguments("--window-size=1920,1080");
-                    System.out.println("[INFO] Chrome ejecutándose en modo headless.");
+                    Logs.info("Chrome ejecutándose en modo headless.");
                 }
                 driver = new ChromeDriver(chromeOptions);
+                break;
             }
             case "edge" -> {
                 try {
                     URL driverUrl = new URL("https://msedgedriver.microsoft.com/");
 
-                    if (isMac){
+                    if (isMac) {
                         WebDriverManager.edgedriver()
-                        .driverRepositoryUrl(driverUrl)
-                        .setup();
-                    }else {
+                                .driverRepositoryUrl(driverUrl)
+                                .setup();
+                    } else {
                         WebDriverManager.edgedriver()
-                            .browserVersion("latest")
-                            .driverRepositoryUrl(driverUrl)
-                            .setup();
+                                .browserVersion("latest")
+                                .driverRepositoryUrl(driverUrl)
+                                .setup();
                     }
                 } catch (MalformedURLException e) {
                     throw new RuntimeException("[ERROR] URL mal formada para el repositorio del Edge driver.", e);
@@ -85,14 +86,15 @@ public class LocalDriverManager extends BaseDriver {
                     edgeOptions.addArguments("--headless=new");
                     edgeOptions.addArguments("--disable-gpu");
                     edgeOptions.addArguments("--window-size=1920,1080");
-                    System.out.println("[INFO] Edge ejecutándose en modo headless.");
+                    Logs.info("Edge ejecutándose en modo headless.");
                 }
                 driver = new EdgeDriver(edgeOptions);
+                break;
             }
             case "firefox" -> {
-                if (isMac){
+                if (isMac) {
                     WebDriverManager.firefoxdriver().setup();
-                }else{
+                } else {
                     WebDriverManager.firefoxdriver().browserVersion("latest").setup();
                 }
                 FirefoxOptions firefoxOptions = new FirefoxOptions();
@@ -102,9 +104,10 @@ public class LocalDriverManager extends BaseDriver {
                 firefoxOptions.addPreference("profile.password_manager_leak_detection", false);
                 if (headless) {
                     firefoxOptions.addArguments("--headless");
-                    System.out.println("[INFO] Firefox ejecutándose en modo headless.");
+                    Logs.info("Firefox ejecutándose en modo headless.");
                 }
                 driver = new FirefoxDriver(firefoxOptions);
+                break;
             }
             case "safari" -> {
                 throw new IllegalStateException("[ERROR] Safari solo está disponible en macOS.");

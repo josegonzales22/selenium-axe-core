@@ -1,12 +1,13 @@
 package com.threebrowsers.selenium.drivers;
 
 import com.threebrowsers.selenium.utils.ConfigReader;
+import com.threebrowsers.selenium.utils.Logs;
+import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.MutableCapabilities;
 
-import java.net.URL;
 import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -57,7 +58,7 @@ public class RemoteDriverManager extends BaseDriver {
                 caps.setCapability("bstack:options", bsOptions);
 
             } else {
-                System.out.println("[INFO] Ejecutando en Grid local o VM: " + remoteUrl);
+                Logs.info("Ejecutando en Grid local o VM: " + remoteUrl);
             }
 
             driver = new RemoteWebDriver(new URL(remoteUrl), caps);

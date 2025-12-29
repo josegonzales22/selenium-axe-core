@@ -1,15 +1,16 @@
 package com.threebrowsers.selenium.utils;
 
 import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.markuputils.MarkupHelper;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.nio.file.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.StandardCopyOption;
 import java.util.List;
 import java.util.Map;
 
@@ -37,7 +38,7 @@ public class AxeUtil {
             String script =
                     "var callback = arguments[arguments.length - 1];" +
                             "axe.run(document, {" +
-                            "  runOnly: { type: 'tag', values: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'] }"+
+                            "  runOnly: { type: 'tag', values: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'] }" +
                             "}).then(results => callback(results));";
 
             Object rawResults = ((JavascriptExecutor) driver).executeAsyncScript(script);
@@ -59,11 +60,9 @@ public class AxeUtil {
                 Path finalHtmlPath = browserReportDir.resolve(safePageName + ".html");
                 Files.move(generated, finalHtmlPath, StandardCopyOption.REPLACE_EXISTING);
 
-                // --- NUEVA LÓGICA: Enlace al reporte en ExtentReports ---
-                // Calculamos la ruta relativa para el reporte HTML
                 String relativePath = "axe/" + browserName + "/" + safePageName + ".html";
                 String linkHtml = "<a href='" + relativePath + "' target='_blank' style='color: #007bff; font-weight: bold;'>[ Ver Reporte de Accesibilidad ]</a>";
-                
+
                 List<?> violations = (List<?>) resultMap.get("violations");
                 if (violations == null || violations.isEmpty()) {
                     test.pass("✅ No se encontraron violaciones en " + pageName + ". " + linkHtml);
@@ -77,7 +76,6 @@ public class AxeUtil {
         } catch (IOException | InterruptedException e) {
             test.fail("Error en análisis de accesibilidad: " + e.getMessage());
         } finally {
-            // Limpieza de artifacts
             cleanupArtifacts(artifactPath);
         }
     }
@@ -88,12 +86,12 @@ public class AxeUtil {
                 try (var stream = Files.list(artifactPath)) {
                     if (stream.findAny().isEmpty()) {
                         Files.delete(artifactPath);
-                        System.out.println("[INFO] Carpeta 'artifacts' eliminada.");
+                        Logs.info("Carpeta 'artifacts' eliminada.");
                     }
                 }
             }
         } catch (IOException e) {
-            System.err.println("No se pudo limpiar la carpeta artifacts: " + e.getMessage());
+            Logs.error("No se pudo limpiar la carpeta artifacts: " + e.getMessage());
         }
     }
 }

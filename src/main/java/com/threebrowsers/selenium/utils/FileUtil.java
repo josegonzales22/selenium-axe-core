@@ -17,7 +17,7 @@ public class FileUtil {
                 }
             }
             folder.delete();
-            System.out.println("[INFO] Carpeta eliminada: " + folder.getAbsolutePath());
+            Logs.info("Carpeta eliminada: " + folder.getAbsolutePath());
         }
     }
 }

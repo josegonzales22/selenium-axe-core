@@ -1,8 +1,10 @@
 package com.threebrowsers.selenium.pages;
 
+import com.threebrowsers.selenium.utils.Logs;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import java.time.Duration;
 
 public class BasePage {
@@ -31,7 +33,7 @@ public class BasePage {
      */
     protected void safeClick(By locator) {
         WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
-        safeClick(element); // ✅ Reutiliza la otra versión
+        safeClick(element);
     }
 
     /**
@@ -49,9 +51,9 @@ public class BasePage {
             } catch (Exception e) {
                 attempts++;
                 if (attempts < 2) {
-                    System.out.println("[WARN] Falló clic normal en elemento — Reintentando...");
+                    Logs.warning("Falló clic normal en elemento — Reintentando...");
                 } else {
-                    System.out.println("[WARN] Intentando clic JS fallback en elemento...");
+                    Logs.warning("Intentando clic JS fallback en elemento...");
                     try {
                         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
                         clicked = true;
@@ -65,15 +67,16 @@ public class BasePage {
 
     /**
      * Método Genérico para esperar elementos
+     *
      * @param elementLocator El By (xpath, id, etc) que se debe esperar
-     * @param pageName Nombre descriptivo para el log
+     * @param pageName       Nombre descriptivo para el log
      */
     public void waitForElementToLoad(By elementLocator, String pageName) {
         try {
             waitVisible(elementLocator);
-            System.out.println("[INFO] Elemento de la página [" + pageName + "] cargado correctamente.");
+            Logs.info("[INFO] Elemento de la página [" + pageName + "] cargado correctamente.");
         } catch (Exception e) {
-            System.err.println("[ERROR] No se pudo cargar la página [" + pageName + "]: " + e.getMessage());
+            Logs.error("[ERROR] No se pudo cargar la página [" + pageName + "]: " + e.getMessage());
         }
     }
 }
