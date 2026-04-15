@@ -6,39 +6,64 @@ import com.google.gson.GsonBuilder;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.StandardCopyOption;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 public class AxeUtil {
 
     private static final String REPORTS_DIR = "reports/axe";
-    private static final String NODE_AXE_PATH = "nodejs/node_modules/axe-core/axe.min.js";
-    private static final String NODE_GENERATOR = "nodejs/generate-html.js";
+    private static final String AXE_FILES_PATH = "src/main/resources/axe_files/";
+    private static final String AXE_JS = AXE_FILES_PATH + "axe.min.js";
+
+    /**
+     * Determina el ejecutable correcto según el Sistema Operativo.
+     */
+    private static String getHtmlReporterPath() {
+        String os = System.getProperty("os.name").toLowerCase();
+        if (os.contains("win")) {
+            return AXE_FILES_PATH + "html_reporter.exe";
+        } else {
+            return AXE_FILES_PATH + "html_reporter_linux";
+        }
+    }
+
+    public static void runAccessibilityScan(WebDriver driver, ExtentTest test, String browserName) {
+        runAccessibilityScan(driver, test, browserName, null);
+    }
 
     public static void runAccessibilityScan(WebDriver driver, ExtentTest test, String browserName, String pageName) {
-        Path artifactPath = Path.of("artifacts");
-        String safePageName = pageName.replaceAll("[^a-zA-Z0-9_-]", "_");
+        String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+
+        String baseName = (pageName == null || pageName.trim().isEmpty())
+                ? "Scan_" + UUID.randomUUID().toString().substring(0, 8)
+                : pageName.replaceAll("[^a-zA-Z0-9_-]", "_");
+
+        String finalName = baseName + "_" + timestamp;
+        String htmlFileName = finalName + ".html";
 
         try {
-            test.info("Ejecutando escaneo de accesibilidad con axe-core en: " + pageName);
+            test.info("Running FULL accessibility scan on: " + (pageName != null ? pageName : "Current Page"));
 
             Path browserReportDir = Path.of(REPORTS_DIR, browserName);
             Files.createDirectories(browserReportDir);
-            Path jsonPath = browserReportDir.resolve(safePageName + ".json");
-            Files.createDirectories(artifactPath);
 
-            String axeSource = Files.readString(Path.of(NODE_AXE_PATH));
+            Path jsonPath = browserReportDir.resolve(finalName + ".json");
+
+            String axeSource = Files.readString(Path.of(AXE_JS));
             ((JavascriptExecutor) driver).executeScript(axeSource);
 
             String script =
                     "var callback = arguments[arguments.length - 1];" +
                             "axe.run(document, {" +
-                            "  runOnly: { type: 'tag', values: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'] }" +
+                            "  restoreScroll: true" +
                             "}).then(results => callback(results));";
 
             Object rawResults = ((JavascriptExecutor) driver).executeAsyncScript(script);
@@ -49,49 +74,49 @@ public class AxeUtil {
                 file.write(gson.toJson(resultMap));
             }
 
-            // Lógica de generación de HTML
-            ProcessBuilder pb = new ProcessBuilder("node", NODE_GENERATOR, jsonPath.toString(), safePageName);
-            pb.inheritIO();
+            File reporterFile = new File(getHtmlReporterPath());
+
+            if (!System.getProperty("os.name").toLowerCase().contains("win")) {
+                if (reporterFile.exists()) {
+                    reporterFile.setExecutable(true);
+                }
+            }
+
+            ProcessBuilder pb = new ProcessBuilder(
+                    reporterFile.getAbsolutePath(),
+                    jsonPath.toAbsolutePath().toString(),
+                    htmlFileName,
+                    browserReportDir.toAbsolutePath().toString()
+            );
+
+            pb.redirectError(ProcessBuilder.Redirect.DISCARD);
+            pb.redirectOutput(ProcessBuilder.Redirect.DISCARD);
+
             Process process = pb.start();
             int exitCode = process.waitFor();
 
+            if (Files.exists(jsonPath)) {
+                Files.delete(jsonPath);
+            }
+
             if (exitCode == 0) {
-                Path generated = artifactPath.resolve("accessibilityReport.html");
-                Path finalHtmlPath = browserReportDir.resolve(safePageName + ".html");
-                Files.move(generated, finalHtmlPath, StandardCopyOption.REPLACE_EXISTING);
+                String relativePath = "axe/" + browserName + "/" + htmlFileName;
+                String linkHtml = "<a href='" + relativePath + "' target='_blank' style='color: #007bff; font-weight: bold;'>[ View Accessibility Report ]</a>";
 
-                String relativePath = "axe/" + browserName + "/" + safePageName + ".html";
-                String linkHtml = "<a href='" + relativePath + "' target='_blank' style='color: #007bff; font-weight: bold;'>[ Ver Reporte de Accesibilidad ]</a>";
-
+                assert resultMap != null;
                 List<?> violations = (List<?>) resultMap.get("violations");
                 if (violations == null || violations.isEmpty()) {
-                    test.pass("✅ No se encontraron violaciones en " + pageName + ". " + linkHtml);
+                    test.pass("No violations found. " + linkHtml);
                 } else {
-                    test.warning("❌ Se encontraron " + violations.size() + " violaciones en " + pageName + ". " + linkHtml);
+                    test.warning("Found " + violations.size() + " violations. " + linkHtml);
                 }
             } else {
-                test.fail("❌ Error al generar reporte HTML para " + pageName);
+                test.fail("Error in html_reporter (Exit code: " + exitCode + "). Check if binary is compatible with: " + System.getProperty("os.name"));
             }
 
         } catch (IOException | InterruptedException e) {
-            test.fail("Error en análisis de accesibilidad: " + e.getMessage());
-        } finally {
-            cleanupArtifacts(artifactPath);
-        }
-    }
-
-    private static void cleanupArtifacts(Path artifactPath) {
-        try {
-            if (Files.exists(artifactPath)) {
-                try (var stream = Files.list(artifactPath)) {
-                    if (stream.findAny().isEmpty()) {
-                        Files.delete(artifactPath);
-                        Logs.info("Carpeta 'artifacts' eliminada.");
-                    }
-                }
-            }
-        } catch (IOException e) {
-            Logs.error("No se pudo limpiar la carpeta artifacts: " + e.getMessage());
+            test.fail("Accessibility analysis error: " + e.getMessage());
+            if (e instanceof InterruptedException) Thread.currentThread().interrupt();
         }
     }
 }

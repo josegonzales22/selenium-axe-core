@@ -1,7 +1,6 @@
 package com.threebrowsers.selenium.drivers;
 
 import com.threebrowsers.selenium.utils.Logs;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -9,18 +8,15 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.safari.SafariDriver;
 
-import java.net.MalformedURLException;
-import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 
 public class LocalDriverManager extends BaseDriver {
 
     private final String browser;
     protected final boolean headless;
-
-    public LocalDriverManager(String browser) {
-        this(browser, false);
-    }
 
     public LocalDriverManager(String browser, boolean headless) {
         this.browser = browser.toLowerCase();
@@ -29,92 +25,76 @@ public class LocalDriverManager extends BaseDriver {
 
     @Override
     public WebDriver createDriver() {
-        String os = System.getProperty("os.name").toLowerCase();
-        boolean isMac = os.contains("mac");
         switch (browser) {
             case "chrome" -> {
-                if (isMac) {
-                    WebDriverManager.chromedriver()
-                            .setup();
-                } else {
-                    WebDriverManager.chromedriver()
-                            .browserVersion("latest")
-                            .setup();
-                }
                 ChromeOptions chromeOptions = new ChromeOptions();
-                java.util.Map<String, Object> prefs = new java.util.HashMap<>();
+                
+                Map<String, Object> prefs = new HashMap<>();
                 prefs.put("credentials_enable_service", false);
                 prefs.put("profile.password_manager_enabled", false);
                 prefs.put("profile.password_manager_leak_detection", false);
+                
                 chromeOptions.setExperimentalOption("prefs", prefs);
+                chromeOptions.addArguments("--start-maximized");
                 chromeOptions.addArguments("--disable-notifications");
                 chromeOptions.addArguments("--disable-popup-blocking");
+
                 if (headless) {
                     chromeOptions.addArguments("--headless=new");
                     chromeOptions.addArguments("--disable-gpu");
                     chromeOptions.addArguments("--window-size=1920,1080");
-                    Logs.info("Chrome ejecutándose en modo headless.");
+                    Logs.info("Chrome lanzado en modo Headless (Desktop)");
                 }
+
                 driver = new ChromeDriver(chromeOptions);
-                break;
             }
+
             case "edge" -> {
-                try {
-                    URL driverUrl = new URL("https://msedgedriver.microsoft.com/");
-
-                    if (isMac) {
-                        WebDriverManager.edgedriver()
-                                .driverRepositoryUrl(driverUrl)
-                                .setup();
-                    } else {
-                        WebDriverManager.edgedriver()
-                                .browserVersion("latest")
-                                .driverRepositoryUrl(driverUrl)
-                                .setup();
-                    }
-                } catch (MalformedURLException e) {
-                    throw new RuntimeException("[ERROR] URL mal formada para el repositorio del Edge driver.", e);
-                }
-
                 EdgeOptions edgeOptions = new EdgeOptions();
-                java.util.Map<String, Object> edgePrefs = new java.util.HashMap<>();
+                
+                Map<String, Object> edgePrefs = new HashMap<>();
                 edgePrefs.put("credentials_enable_service", false);
                 edgePrefs.put("profile.password_manager_enabled", false);
-                edgePrefs.put("profile.password_manager_leak_detection", false);
+                
                 edgeOptions.setExperimentalOption("prefs", edgePrefs);
+                edgeOptions.addArguments("--start-maximized");
+
                 if (headless) {
                     edgeOptions.addArguments("--headless=new");
                     edgeOptions.addArguments("--disable-gpu");
                     edgeOptions.addArguments("--window-size=1920,1080");
-                    Logs.info("Edge ejecutándose en modo headless.");
+                    Logs.info("Edge lanzado en modo Headless (Desktop)");
                 }
+
                 driver = new EdgeDriver(edgeOptions);
-                break;
             }
+
             case "firefox" -> {
-                if (isMac) {
-                    WebDriverManager.firefoxdriver().setup();
-                } else {
-                    WebDriverManager.firefoxdriver().browserVersion("latest").setup();
-                }
                 FirefoxOptions firefoxOptions = new FirefoxOptions();
+                
                 firefoxOptions.addPreference("signon.rememberSignons", false);
-                firefoxOptions.addPreference("signon.autofillForms", false);
-                firefoxOptions.addPreference("signon.management.page.breach-alerts.enabled", false);
                 firefoxOptions.addPreference("profile.password_manager_leak_detection", false);
+
                 if (headless) {
                     firefoxOptions.addArguments("--headless");
-                    Logs.info("Firefox ejecutándose en modo headless.");
+                    firefoxOptions.addArguments("--width=1920");
+                    firefoxOptions.addArguments("--height=1080");
+                    Logs.info("Firefox lanzado en modo Headless (Desktop)");
                 }
+
                 driver = new FirefoxDriver(firefoxOptions);
-                break;
+                if (!headless) {
+                    driver.manage().window().maximize();
+                }
             }
+
             case "safari" -> {
                 throw new IllegalStateException("[ERROR] Safari solo está disponible en macOS.");
             }
 
-            default -> throw new IllegalArgumentException("[INFO] Navegador local no soportado: " + browser);
+            default -> throw new IllegalArgumentException("[ERROR] Navegador no soportado: " + browser);
         }
+
         setupDriver(driver);
         return driver;
     }

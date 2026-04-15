@@ -1,6 +1,10 @@
 package com.threebrowsers.selenium.tests;
 
-import annotations.Smoke;
+import annotations.browsers.chrome.ChromeDesktop;
+import annotations.browsers.edge.EdgeDesktop;
+import annotations.browsers.firefox.FirefoxDesktop;
+import annotations.browsers.safari.SafariLocal;
+import annotations.browsers.safari.SafariCloud;
 import com.threebrowsers.selenium.drivers.BaseDriver;
 import com.threebrowsers.selenium.drivers.LocalDriverManager;
 import com.threebrowsers.selenium.drivers.RemoteDriverManager;
@@ -14,7 +18,7 @@ public class CrossBrowserSuiteTest extends BaseTest {
     @Test
     @Order(1)
     @DisplayName("Chrome")
-    @Smoke
+    @ChromeDesktop
     void testInChrome() throws InterruptedException {
         String currentBrowser = "chrome";
         BaseDriver driverManager = new LocalDriverManager(currentBrowser, headlessLocal);
@@ -24,7 +28,7 @@ public class CrossBrowserSuiteTest extends BaseTest {
     @Test
     @Order(2)
     @DisplayName("Edge")
-    @Smoke
+    @EdgeDesktop
     void testInEdge() throws InterruptedException {
         String currentBrowser = "edge";
         BaseDriver driverManager = new LocalDriverManager(currentBrowser, headlessLocal);
@@ -34,7 +38,7 @@ public class CrossBrowserSuiteTest extends BaseTest {
     @Test
     @Order(3)
     @DisplayName("Firefox")
-    @Smoke
+    @FirefoxDesktop
     void testInFirefox() throws InterruptedException {
         String currentBrowser = "firefox";
         BaseDriver driverManager = new LocalDriverManager(currentBrowser, headlessLocal);
@@ -45,7 +49,7 @@ public class CrossBrowserSuiteTest extends BaseTest {
     @Order(4)
     @EnabledOnOs(OS.MAC)
     @DisplayName("Safari")
-    @Smoke
+    @SafariLocal
     void testInSafari() throws InterruptedException {
         String currentBrowser = "safari";
 
@@ -62,7 +66,7 @@ public class CrossBrowserSuiteTest extends BaseTest {
     @Order(5)
     @DisplayName("Safari cloud")
     //@Disabled("No Credentials")
-    @Smoke
+    @SafariCloud
     void testInSafariCloud() throws InterruptedException {
         String currentBrowser = "safari cloud";
         BaseDriver driverManager = new RemoteDriverManager();
