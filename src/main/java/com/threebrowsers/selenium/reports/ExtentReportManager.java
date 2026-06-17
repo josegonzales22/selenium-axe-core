@@ -26,21 +26,22 @@ public class ExtentReportManager {
         spark.config().setReportName("Cross-Browser Test Results - " + safeBrowserName);
         spark.config().setTimeStampFormat("yyyy-MM-dd HH:mm:ss");
 
+
         extent = new ExtentReports();
         extent.attachReporter(spark);
 
         extent.setSystemInfo("Tester", "Jose Gonzales");
         extent.setSystemInfo("Browser", safeBrowserName);
-        extent.setSystemInfo("Project", "Selenium & Axe Core");
+        extent.setSystemInfo("Project", "Selenium Cross Browser");
 
-        Logs.info("Reporte creado: " + reportPath);
+        Logs.info("Created report: " + reportPath);
         return extent;
     }
 
     public static void closeReport() {
         if (extent != null) {
             extent.flush();
-            Logs.info("Reporte cerrado correctamente.");
+            Logs.info("Report closed successfully");
             extent = null;
         }
     }

@@ -50,8 +50,6 @@ public class AxeUtil {
         String htmlFileName = finalName + ".html";
 
         try {
-            test.info("Running FULL accessibility scan on: " + (pageName != null ? pageName : "Current Page"));
-
             Path browserReportDir = Path.of(REPORTS_DIR, browserName);
             Files.createDirectories(browserReportDir);
 
@@ -99,6 +97,8 @@ public class AxeUtil {
                 Files.delete(jsonPath);
             }
 
+            String targetPage = (pageName != null ? pageName : "Current Page");
+
             if (exitCode == 0) {
                 String relativePath = "axe/" + browserName + "/" + htmlFileName;
                 String linkHtml = "<a href='" + relativePath + "' target='_blank' style='color: #007bff; font-weight: bold;'>[ View Accessibility Report ]</a>";
@@ -106,16 +106,16 @@ public class AxeUtil {
                 assert resultMap != null;
                 List<?> violations = (List<?>) resultMap.get("violations");
                 if (violations == null || violations.isEmpty()) {
-                    test.pass("No violations found. " + linkHtml);
+                    test.pass("Axe-Core Scan: No violations found. " + linkHtml);
                 } else {
-                    test.warning("Found " + violations.size() + " violations. " + linkHtml);
+                    test.warning("Axe-Core Scan: Found " + violations.size() + " violations groups. " + linkHtml);
                 }
             } else {
-                test.fail("Error in html_reporter (Exit code: " + exitCode + "). Check if binary is compatible with: " + System.getProperty("os.name"));
+                test.fail("Axe-Core Scan: Error in html_reporter (Exit code: " + exitCode + "). Check if binary is compatible with: " + System.getProperty("os.name"));
             }
 
         } catch (IOException | InterruptedException e) {
-            test.fail("Accessibility analysis error: " + e.getMessage());
+            test.fail("Axe-Core Scan: Accessibility analysis error: " + e.getMessage());
             if (e instanceof InterruptedException) Thread.currentThread().interrupt();
         }
     }

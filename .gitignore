@@ -17,5 +17,6 @@ Thumbs.db
 
 # Dependencias descargadas
 node_modules/
+nodejs
 
-*package-lock.json
+.idea

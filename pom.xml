@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
                              http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
-
-        <!-- Forzar codificación UTF-8 en compilación y reportes -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
@@ -15,15 +14,18 @@
         <junit.jupiter.version>5.11.0</junit.jupiter.version>
         <extentreports.version>5.1.1</extentreports.version>
         <commons.io.version>2.16.1</commons.io.version>
-        <aspectj.version>1.9.25.1</aspectj.version>
 
+        <!-- AspectJ -->
+        <aspectj.version>1.9.25.1</aspectj.version>
         <repository-url>github.com/josegonzales22/selenium-axe-core</repository-url>
-        <project-name>Selenium and Axe Core</project-name>
+        <project-name>Selenium Axe Core</project-name>
 
         <maven.build.timestamp.format>yyyy</maven.build.timestamp.format>
         <current.year>${maven.build.timestamp}</current.year>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <groups></groups>
     </properties>
+
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.threebrowsers.selenium</groupId>
@@ -74,11 +76,7 @@
             <artifactId>commons-io</artifactId>
             <version>${commons.io.version}</version>
         </dependency>
-        <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-            <version>2.10.1</version>
-        </dependency>
+
         <!-- AspectJ Weaver (requerido para anotaciones personalizadas) -->
         <dependency>
             <groupId>org.aspectj</groupId>
@@ -100,6 +98,7 @@
 
     <build>
         <plugins>
+
             <!-- Compilador Java -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -112,18 +111,23 @@
                 </configuration>
             </plugin>
 
-            <!-- Ejecutor de tests con codificación UTF-8 -->
+            <!-- Surefire + AspectJ para interceptar anotaciones -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.2.5</version>
+
                 <configuration>
                     <includes>
-                        <include>**/CrossBrowserSuiteTest.java</include>
+                        <include>**/*SuiteTest.java</include>
+                        <include>**/*Test.java</include>
                     </includes>
+
+                    <groups>${groups}</groups>
+
                     <useSystemClassLoader>true</useSystemClassLoader>
                     <testFailureIgnore>false</testFailureIgnore>
-                    <!-- Carga del agente AspectJ + UTF-8 -->
+
                     <argLine>
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                         -Dfile.encoding=UTF-8
@@ -135,12 +139,18 @@
                 <artifactId>maven-site-plugin</artifactId>
                 <version>3.21.0</version>
             </plugin>
+
+
         </plugins>
     </build>
     <description>
-        This project runs automated accessibility tests using Selenium WebDriver, JUnit 5, and axe-core. It includes
-        support for generating HTML reports and compatibility with cross-platform CI/CD workflows (Windows, Linux,
-        macOS).
+        A basic framework for automated functional testing with multi-browser execution,
+        support for local and remote execution, and automatic generation of HTML reports with a dashboard.
+
+        This project serves as an initial template for building a clean and scalable automation architecture
+        with Selenium WebDriver + JUnit 5 + Maven, supporting execution in: Chrome, Edge, Firefox,
+        Safari (local only on macOS or remote via RemoteWebDriver) and Remote WebDriver (Selenium Grid, Selenoid,
+        BrowserStack, LambdaTest, etc.)
     </description>
 
     <licenses>

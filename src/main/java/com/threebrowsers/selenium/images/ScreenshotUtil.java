@@ -14,17 +14,18 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class ScreenshotUtil {
 
-    private static final String BASE_DIR = "images";
+    // Base dentro de la carpeta reports
+    private static final String BASE_DIR = "reports/images";
 
     private static final ConcurrentHashMap<String, AtomicInteger> browserCounters = new ConcurrentHashMap<>();
 
-    public static void takeScreenshot(WebDriver driver, String browser, String stepName) {
+    public static String takeScreenshot(WebDriver driver, String browser, String stepName) {
         try {
             String safeBrowser = browser != null ? browser.replaceAll("[^a-zA-Z0-9]", "_").toLowerCase() : "general";
-
             AtomicInteger counter = browserCounters.computeIfAbsent(safeBrowser, k -> new AtomicInteger(0));
             int orderNumber = counter.incrementAndGet();
 
+            // Carpeta: reports/images/{browser}
             String browserDir = BASE_DIR + File.separator + safeBrowser;
             Files.createDirectories(Paths.get(browserDir));
 
@@ -35,15 +36,14 @@ public class ScreenshotUtil {
             Files.copy(srcFile.toPath(), Paths.get(filePath));
 
             Logs.info("Screenshot guardado: " + filePath);
+
+            return "images" + File.separator + safeBrowser + File.separator + fileName;
         } catch (IOException e) {
             Logs.error("No se pudo guardar el screenshot: " + e.getMessage());
+            return null;
         }
     }
 
-    /**
-     * Reinicia el contador del navegador indicado.
-     * Se debe llamar al iniciar la ejecución de un nuevo navegador.
-     */
     public static void resetCounter(String browser) {
         if (browser != null) {
             String safeBrowser = browser.replaceAll("[^a-zA-Z0-9]", "_").toLowerCase();
