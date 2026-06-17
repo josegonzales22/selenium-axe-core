@@ -1,4 +1,4 @@
-# 🚀 Selenium Cross Browser – Automation Template
+# 🚀 Selenium Axe-Core Automation Template
 
 Framework base para **pruebas funcionales automatizadas** con ejecución **multinavegador**, soporte para ejecución *
 *local y remota**, y generación automática de **reportes HTML jerárquicos** con dashboard.
