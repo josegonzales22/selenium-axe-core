@@ -3,6 +3,9 @@ package com.threebrowsers.selenium.pages;
 import com.threebrowsers.selenium.utils.Logs;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import java.time.Duration;
 
 public class NavigatePage extends BasePage {
     private final By menuButton = By.xpath("//button[.//text()[contains(., 'menu')]]");
@@ -16,21 +19,47 @@ public class NavigatePage extends BasePage {
 
     public void clickMenu() {
         safeClick(menuButton);
-        Logs.info("Interacción con botón de menú");
+        Logs.info("Menu button interaction successfully executed");
     }
 
     public void goToComponentsPage() {
         safeClick(componentButtonPage);
-        waitForElementToLoad(componentButtonPage, "Componentes");
+        try {
+            driver.manage().timeouts().implicitlyWait(Duration.ofMillis(0));
+            wait.until(ExpectedConditions.urlContains("/components"));
+            Logs.info("Successful redirection to the Components page.");
+        } catch (Exception e) {
+            throw new AssertionError("[QA ERROR] Transition to the Components page was not completed. Current URL: " + driver.getCurrentUrl(), e);
+        } finally {
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        }
     }
 
     public void goToFormsPage() {
         safeClick(formButtonPage);
-        waitForElementToLoad(formButtonPage, "Formularios");
+
+        try {
+            driver.manage().timeouts().implicitlyWait(Duration.ofMillis(0));
+            wait.until(ExpectedConditions.urlContains("/forms"));
+            Logs.info("Successful redirection to the Forms page.");
+        } catch (Exception e) {
+            throw new AssertionError("[QA ERROR] Transition to the Forms page was not completed. Current URL: " + driver.getCurrentUrl(), e);
+        } finally {
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        }
     }
 
     public void goToContentPage() {
         safeClick(contentButtonPage);
-        waitForElementToLoad(contentButtonPage, "Contenido");
+
+        try {
+            driver.manage().timeouts().implicitlyWait(Duration.ofMillis(0));
+            wait.until(ExpectedConditions.urlContains("/content"));
+            Logs.info("Successful redirection to the Content page.");
+        } catch (Exception e) {
+            throw new AssertionError("[QA ERROR] Transition to the Content page was not completed. Current URL: " + driver.getCurrentUrl(), e);
+        } finally {
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        }
     }
 }

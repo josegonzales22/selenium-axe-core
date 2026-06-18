@@ -19,46 +19,43 @@ public class BasePage {
 
     /**
      * Espera hasta que el elemento sea visible y lo devuelve.
+     * Mapea el Timeout a un AssertionError para pintar el pipeline de AMARILLO de forma limpia.
      */
     protected WebElement waitVisible(By locator) {
         try {
+            driver.manage().timeouts().implicitlyWait(Duration.ofMillis(0));
             return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
         } catch (TimeoutException e) {
-            throw new AssertionError("[ERROR] Elemento no visible: " + locator, e);
+            throw new AssertionError("[QA ERROR] Item did not appear within the stipulated time: " + locator, e);
+        } finally {
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         }
     }
 
     /**
-     * Realiza un clic seguro con reintento automático y fallback por JS (usando By).
+     * Realiza un clic seguro buscando el elemento de forma fresca en cada reintento mediante su Localizador (By).
      */
     protected void safeClick(By locator) {
-        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
-        safeClick(element);
-    }
-
-    /**
-     * Realiza un clic seguro con reintento automático y fallback por JS (usando WebElement).
-     */
-    protected void safeClick(WebElement element) {
         int attempts = 0;
         boolean clicked = false;
 
         while (attempts < 2 && !clicked) {
             try {
-                wait.until(ExpectedConditions.elementToBeClickable(element));
+                WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
                 element.click();
                 clicked = true;
             } catch (Exception e) {
                 attempts++;
                 if (attempts < 2) {
-                    Logs.warning("Falló clic normal en elemento — Reintentando...");
+                    Logs.warning("Normal click failed " + locator + " — Retrying with fresh element...");
                 } else {
-                    Logs.warning("Intentando clic JS fallback en elemento...");
+                    Logs.warning("Attempting to click JS fallback on " + locator + "...");
                     try {
+                        WebElement element = driver.findElement(locator);
                         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
                         clicked = true;
                     } catch (Exception jsEx) {
-                        throw new AssertionError("[ERROR] No se pudo hacer clic ni por JS en elemento.", jsEx);
+                        throw new AssertionError("[QA ERROR] Interaction blocked. Could not be clicked or accessed via JS: " + locator, jsEx);
                     }
                 }
             }
@@ -66,17 +63,32 @@ public class BasePage {
     }
 
     /**
-     * Método Genérico para esperar elementos
-     *
-     * @param elementLocator El By (xpath, id, etc) que se debe esperar
-     * @param pageName       Nombre descriptivo para el log
+     * Realiza un clic seguro usando una instancia de WebElement existente (Fallback secundario).
+     */
+    protected void safeClick(WebElement element) {
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(element));
+            element.click();
+        } catch (Exception e) {
+            Logs.warning("Direct click failed. Attempting fallback via JavaScript on the WebElement...");
+            try {
+                ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+            } catch (Exception jsEx) {
+                throw new AssertionError("[QA ERROR] The WebElement could not be clicked conventionally or via JS.", jsEx);
+            }
+        }
+    }
+
+    /**
+     * Método Genérico para esperar elementos.
      */
     public void waitForElementToLoad(By elementLocator, String pageName) {
         try {
             waitVisible(elementLocator);
-            Logs.info("[INFO] Elemento de la página [" + pageName + "] cargado correctamente.");
-        } catch (Exception e) {
-            Logs.error("[ERROR] No se pudo cargar la página [" + pageName + "]: " + e.getMessage());
+            Logs.info("Page element [" + pageName + "] charged correctly.");
+        } catch (AssertionError e) {
+            Logs.error("The page could not be loaded [" + pageName + "]: " + e.getMessage());
+            throw e;
         }
     }
 }

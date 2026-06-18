@@ -8,7 +8,6 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.safari.SafariDriver;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -28,12 +27,12 @@ public class LocalDriverManager extends BaseDriver {
         switch (browser) {
             case "chrome" -> {
                 ChromeOptions chromeOptions = new ChromeOptions();
-                
+
                 Map<String, Object> prefs = new HashMap<>();
                 prefs.put("credentials_enable_service", false);
                 prefs.put("profile.password_manager_enabled", false);
                 prefs.put("profile.password_manager_leak_detection", false);
-                
+
                 chromeOptions.setExperimentalOption("prefs", prefs);
                 chromeOptions.addArguments("--start-maximized");
                 chromeOptions.addArguments("--disable-notifications");
@@ -43,7 +42,7 @@ public class LocalDriverManager extends BaseDriver {
                     chromeOptions.addArguments("--headless=new");
                     chromeOptions.addArguments("--disable-gpu");
                     chromeOptions.addArguments("--window-size=1920,1080");
-                    Logs.info("Chrome lanzado en modo Headless (Desktop)");
+                    Logs.info("Chrome launched in headless mode (Desktop)");
                 }
 
                 driver = new ChromeDriver(chromeOptions);
@@ -51,11 +50,11 @@ public class LocalDriverManager extends BaseDriver {
 
             case "edge" -> {
                 EdgeOptions edgeOptions = new EdgeOptions();
-                
+
                 Map<String, Object> edgePrefs = new HashMap<>();
                 edgePrefs.put("credentials_enable_service", false);
                 edgePrefs.put("profile.password_manager_enabled", false);
-                
+
                 edgeOptions.setExperimentalOption("prefs", edgePrefs);
                 edgeOptions.addArguments("--start-maximized");
 
@@ -63,7 +62,7 @@ public class LocalDriverManager extends BaseDriver {
                     edgeOptions.addArguments("--headless=new");
                     edgeOptions.addArguments("--disable-gpu");
                     edgeOptions.addArguments("--window-size=1920,1080");
-                    Logs.info("Edge lanzado en modo Headless (Desktop)");
+                    Logs.info("Edge launched in headless mode (Desktop)");
                 }
 
                 driver = new EdgeDriver(edgeOptions);
@@ -71,7 +70,7 @@ public class LocalDriverManager extends BaseDriver {
 
             case "firefox" -> {
                 FirefoxOptions firefoxOptions = new FirefoxOptions();
-                
+
                 firefoxOptions.addPreference("signon.rememberSignons", false);
                 firefoxOptions.addPreference("profile.password_manager_leak_detection", false);
 
@@ -79,7 +78,7 @@ public class LocalDriverManager extends BaseDriver {
                     firefoxOptions.addArguments("--headless");
                     firefoxOptions.addArguments("--width=1920");
                     firefoxOptions.addArguments("--height=1080");
-                    Logs.info("Firefox lanzado en modo Headless (Desktop)");
+                    Logs.info("Firefox launched in headless mode (Desktop)");
                 }
 
                 driver = new FirefoxDriver(firefoxOptions);
@@ -89,13 +88,21 @@ public class LocalDriverManager extends BaseDriver {
             }
 
             case "safari" -> {
-                throw new IllegalStateException("[ERROR] Safari solo está disponible en macOS.");
+                throw new IllegalStateException("[ERROR] Safari is only available on macOS");
             }
 
-            default -> throw new IllegalArgumentException("[ERROR] Navegador no soportado: " + browser);
+            default -> throw new IllegalArgumentException("[ERROR] Browser not supported: " + browser);
         }
 
         setupDriver(driver);
+
+        if (!headless) {
+            try {
+                driver.manage().window().maximize();
+            } catch (Exception e) {
+                Logs.info("The window could not be maximized graphically (Ignored for CI/CD stability)");
+            }
+        }
         return driver;
     }
 }

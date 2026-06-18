@@ -1,0 +1,32 @@
+21:40:31.203 INFO  AUTOMATION - Starting Suite configurations for: Login Suite Test
+21:40:31.417 INFO  AUTOMATION - Folder and previous execution history securely cleaned: D:\Archivos\Repositorio\Selenium\selenium-axe-core\reports
+21:40:31.630 INFO  AUTOMATION - Extent report created in a fixed way in: reports\ExecutionReport_CrossBrowserSuite.html
+21:40:31.633 INFO  AUTOMATION - Suite Parent Node successfully created for: Login Suite Test
+21:40:34.233 INFO  AUTOMATION - Screenshot counter reset for: chrome_desktop
+21:40:35.058 INFO  AUTOMATION - Page loaded in browser. Validating initial DOM...
+21:40:35.701 INFO  AUTOMATION - Page element [Login Page] charged correctly.
+21:40:35.813 INFO  AUTOMATION - Screenshot saved in storage: reports/images\chrome_desktop\01_loginPage_loaded.png
+21:40:36.636 INFO  AUTOMATION - Username entered successfully.
+21:40:36.821 INFO  AUTOMATION - Password entered successfully.
+21:40:37.008 INFO  AUTOMATION - Login button clicked.
+21:40:37.217 INFO  AUTOMATION - Screenshot saved in storage: reports/images\chrome_desktop\02_login_completed.png
+21:40:37.428 INFO  AUTOMATION - Execution completed and driver destroyed for: CHROME DESKTOP
+21:40:39.296 INFO  AUTOMATION - Screenshot counter reset for: edge_desktop
+21:40:40.556 INFO  AUTOMATION - Page loaded in browser. Validating initial DOM...
+21:40:41.148 INFO  AUTOMATION - Page element [Login Page] charged correctly.
+21:40:41.251 INFO  AUTOMATION - Screenshot saved in storage: reports/images\edge_desktop\01_loginPage_loaded.png
+21:40:41.946 INFO  AUTOMATION - Username entered successfully.
+21:40:42.124 INFO  AUTOMATION - Password entered successfully.
+21:40:42.262 INFO  AUTOMATION - Login button clicked.
+21:40:42.453 INFO  AUTOMATION - Screenshot saved in storage: reports/images\edge_desktop\02_login_completed.png
+21:40:42.714 INFO  AUTOMATION - Execution completed and driver destroyed for: EDGE DESKTOP
+21:40:48.033 INFO  AUTOMATION - Screenshot counter reset for: firefox_desktop
+21:40:49.416 INFO  AUTOMATION - Page loaded in browser. Validating initial DOM...
+21:40:50.109 INFO  AUTOMATION - Page element [Login Page] charged correctly.
+21:40:50.217 INFO  AUTOMATION - Screenshot saved in storage: reports/images\firefox_desktop\01_loginPage_loaded.png
+21:40:51.101 INFO  AUTOMATION - Username entered successfully.
+21:40:51.188 INFO  AUTOMATION - Password entered successfully.
+21:40:51.338 INFO  AUTOMATION - Login button clicked.
+21:40:51.437 INFO  AUTOMATION - Screenshot saved in storage: reports/images\firefox_desktop\02_login_completed.png
+21:40:53.587 INFO  AUTOMATION - Execution completed and driver destroyed for: FIREFOX DESKTOP
+21:40:53.891 INFO  AUTOMATION - Report successfully consolidated and written to disk.

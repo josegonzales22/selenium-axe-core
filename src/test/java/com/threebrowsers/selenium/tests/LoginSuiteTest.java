@@ -13,13 +13,14 @@ import org.junit.jupiter.api.condition.OS;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class LoginSuiteTest extends BaseTest {
+
     @Test
     @Order(1)
     @ChromeDesktop
     void testInChrome() {
         String browser = "chrome";
-        executeTest(browser, new LocalDriverManager(browser, headlessLocal), (driver, test) -> {
-            new LoginSteps(driver, browser, test).execute(baseUrlLocal);
+        executeTest("Chrome Desktop", new LocalDriverManager(browser, headlessLocal), (driver, test) -> {
+            new LoginSteps(driver, "Chrome_Desktop", test).execute(baseUrlLocal);
         });
     }
 
@@ -28,8 +29,8 @@ public class LoginSuiteTest extends BaseTest {
     @EdgeDesktop
     void testInEdge() {
         String browser = "edge";
-        executeTest(browser, new LocalDriverManager(browser, headlessLocal), (driver, test) -> {
-            new LoginSteps(driver, browser, test).execute(baseUrlLocal);
+        executeTest("Edge Desktop", new LocalDriverManager(browser, headlessLocal), (driver, test) -> {
+            new LoginSteps(driver, "Edge_Desktop", test).execute(baseUrlLocal);
         });
     }
 
@@ -38,8 +39,8 @@ public class LoginSuiteTest extends BaseTest {
     @FirefoxDesktop
     void testInFirefox() {
         String browser = "firefox";
-        executeTest(browser, new LocalDriverManager(browser, headlessLocal), (driver, test) -> {
-            new LoginSteps(driver, browser, test).execute(baseUrlLocal);
+        executeTest("Firefox Desktop", new LocalDriverManager(browser, headlessLocal), (driver, test) -> {
+            new LoginSteps(driver, "Firefox_Desktop", test).execute(baseUrlLocal);
         });
     }
 
@@ -48,12 +49,12 @@ public class LoginSuiteTest extends BaseTest {
     @EnabledOnOs(OS.MAC)
     @DisplayName("Safari")
     @SafariLocal
-    void testInSafari() throws InterruptedException {
+    void testInSafari() {
         String browser = "safari";
         BaseDriver driverManager = new com.threebrowsers.selenium.drivers.mac.LocalDriverManagerMac(browser, false);
 
-        executeTest(browser, driverManager, (driver, test) -> {
-            new LoginSteps(driver, browser, test).execute(baseUrlLocal);
+        executeTest("Safari Desktop", driverManager, (driver, test) -> {
+            new LoginSteps(driver, "Safari_Desktop", test).execute(baseUrlLocal);
         });
     }
 }

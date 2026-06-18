@@ -4,6 +4,9 @@ import com.threebrowsers.selenium.utils.Logs;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import java.time.Duration;
 
 public class LoginPage extends BasePage {
     private final By userInput = By.xpath("//input[contains(@name, 'email')]");
@@ -16,26 +19,41 @@ public class LoginPage extends BasePage {
 
     public void loadPage(String url) {
         driver.get(url);
-        Logs.info("Página cargada: " + driver.getTitle());
+        Logs.info("Page loaded in browser. Validating initial DOM...");
         waitVisible(By.tagName("body"));
+        waitForElementToLoad(userInput, "Login Page");
     }
 
     public void enterUsername(String username) {
-        WebElement input = waitVisible(userInput);
-        input.clear();
-        input.sendKeys(username);
-        Logs.info("Nombre de usuario ingresado: " + username);
+        try {
+            driver.manage().timeouts().implicitlyWait(Duration.ofMillis(0));
+            WebElement input = wait.until(ExpectedConditions.elementToBeClickable(userInput));
+            input.clear();
+            input.sendKeys(username);
+            Logs.info("Username entered successfully.");
+        } catch (Exception e) {
+            throw new AssertionError("[QA ERROR] The user field did not accept interaction: " + userInput, e);
+        } finally {
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        }
     }
 
     public void enterPassword(String password) {
-        WebElement input = waitVisible(pswInput);
-        input.clear();
-        input.sendKeys(password);
-        Logs.info("Contraseña ingresada");
+        try {
+            driver.manage().timeouts().implicitlyWait(Duration.ofMillis(0));
+            WebElement input = wait.until(ExpectedConditions.elementToBeClickable(pswInput));
+            input.clear();
+            input.sendKeys(password);
+            Logs.info("Password entered successfully.");
+        } catch (Exception e) {
+            throw new AssertionError("[QA ERROR] The password field did not accept interaction: " + pswInput, e);
+        } finally {
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        }
     }
 
     public void clickLogin() {
         safeClick(logInButton);
-        Logs.info("Botón de inicio de sesión clickeado.");
+        Logs.info("Login button clicked.");
     }
 }

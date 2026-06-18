@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.threebrowsers.selenium.tests.LoginSuiteTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 23.21 s -- in com.threebrowsers.selenium.tests.LoginSuiteTest

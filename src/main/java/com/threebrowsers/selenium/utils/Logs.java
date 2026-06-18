@@ -3,8 +3,6 @@ package com.threebrowsers.selenium.utils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.util.Formatter;
-
 public class Logs {
     private static final Logger log = LogManager.getLogger("AUTOMATION");
 
@@ -25,7 +23,7 @@ public class Logs {
     }
 
     public static void warning(String message) {
-        log.fatal(message);
+        log.warn(message);
     }
 
     public static void fatal(String message) {
@@ -33,26 +31,26 @@ public class Logs {
     }
 
     public static void trace(String format, Object... args) {
-        log.trace(new Formatter().format(format, args).toString());
+        log.trace(format, args);
     }
 
     public static void debug(String format, Object... args) {
-        log.debug(new Formatter().format(format, args).toString());
+        log.debug(format, args);
     }
 
     public static void info(String format, Object... args) {
-        log.info(new Formatter().format(format, args).toString());
+        log.info(format, args);
     }
 
     public static void warning(String format, Object... args) {
-        log.warn(new Formatter().format(format, args).toString());
+        log.warn(format, args);
     }
 
     public static void error(String format, Object... args) {
-        log.error(new Formatter().format(format, args).toString());
+        log.error(format, args);
     }
 
     public static void fatal(String format, Object... args) {
-        log.fatal(new Formatter().format(format, args).toString());
+        log.fatal(format, args);
     }
 }

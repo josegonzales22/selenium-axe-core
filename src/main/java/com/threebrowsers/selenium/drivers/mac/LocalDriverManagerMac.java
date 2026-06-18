@@ -8,27 +8,40 @@ import org.openqa.selenium.safari.SafariOptions;
 
 public class LocalDriverManagerMac extends LocalDriverManager {
 
+    private final String browser;
+
     public LocalDriverManagerMac(String browser, boolean headless) {
         super(browser, headless);
+        this.browser = browser.toLowerCase();
     }
 
     @Override
     public WebDriver createDriver() {
         if (!System.getProperty("os.name").toLowerCase().contains("mac")) {
-            Logs.warning("SafariDriver solo es válido en macOS.");
+            throw new IllegalStateException("[ERROR] Safari can only run on agents/runners with real macOS");
         }
 
         if (super.headless) {
-            Logs.warning("Safari NO soporta headless. Ignorando parámetro.");
+            Logs.warning("Safari does not natively support headless mode. It will force visible execution.");
+        }
+
+        if (!browser.equals("safari")) {
+            return super.createDriver();
         }
 
         SafariOptions safariOptions = new SafariOptions();
 
-        Logs.info("SafariDriver iniciado en macOS.");
-
-        WebDriver driver = new SafariDriver(safariOptions);
+        Logs.info("SafariDriver started safely on macOS");
+        driver = new SafariDriver(safariOptions);
 
         setupDriver(driver);
+
+        try {
+            driver.manage().window().maximize();
+        } catch (Exception e) {
+            Logs.info("Safari could not be maximized graphically: " + e.getMessage());
+        }
+
         return driver;
     }
 }
